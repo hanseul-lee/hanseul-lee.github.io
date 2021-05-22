@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HS&#39;s blog">
-    <title>[미니 프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표 - HS&#39;s blog</title>
+    <title>[프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표 - HS&#39;s blog</title>
     <link rel="canonical" href="https://hanseul-lee.github.io/2020/11/20/20-11-20-til/">
     <meta name="author" content="Hanseul lee">
     
@@ -16,16 +16,16 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss2.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\n\n\n오늘 한 것\nsearch 페이지 완성\npopup 눌렀을 때 화면이 맨 위로 올라가는 버그 고치기\n독립적인 파일 스코프를 갖지 않는 JS의 문제점 때문에 변수명 합치고 통일하기\n\n\n팀원 각각 파트 연결되는 부분 통일하고 전체 페이지 git으로 합치기\npopup.js 하나로 만들기(변수명 통일, 중복되는 선언문 지우기 등)\n로그아웃 시 주소창에 페이지 주소 입력해도 접근불가능하게 막기\nlocalstorage에 curlog 키 추가하고 미로그인시 로그인페이지로 이동하게 하기\nhtml titie 통일하기\n이미지 파일 통일하기\n\n\n발표 연습(18:00 ~ 18:40)\n발표 PPT 준비\n리허설 및 각자 질문해주기\n\n\n최종 발표(19:00 ~ 21:00)\n넷플릭스, 왓챠와 비교해 개선한 차이점 정리하기\n다른 팀 발표 듣기 및 피드백\n각자 맡은 파트 별로 발표\n\n\n\n\nWATFLICHA 최종 완성본\n\n미니프로젝트를 통해 얻고 싶은 것 =&gt; 피드백\ngit flow를 통한 협업과정 익히기저번 해커톤 때 git organization을 통해 협업을 했을 때보다 git flow를 쓰는 게 fork하는 한 단계를 더 거치기 때문에 까다롭다고 생각해서 걱정이 많았다. 심지어 리허설로 연습할 때랑 월요일에 시작할때도 오류도 많고 제대로 연습을 못했어서 git이 발목을 잡지는 않을까 생각도 들었다. 하지만 계속 팀원들과 주고받다보니 git flow도 익숙해지고 서로 오류도 찾아내며 고쳐서 git flow에 친숙함을 느끼게 된 시간이었다.\n전체 과정 정리12345678910111213141516171819git clone 내레포주소git remote add pmorigin 팀장주소git flow initgithub에서 이슈 등록 -&gt; 팀장님에게 알려주기(#123-로그인 페이지 구현)git flow feature start 브랜치이름파일에서 코드 작성git add .git commit -m &quot;feat: #123-로그인구현&quot;git flow feature finish 브랜치이름git push origin developgithub에서 Pull requests 요청(주의!!) 팀장 develop ← 자신의 브랜치팀장 - Pull request 받아들이고 합치기git pull pmorigin develop다시 새로운 브랜치 만들어서 작업\n\n\n\n\n\n\n\n\nAPI 사용하기(영화 API)영화 API는 TMDB(The Movie DataBase)의 API를 사용했다. TMDB는 전 세계적으로 가장 유명한 영화 DB를 가진 곳이고 이용 방법이 간단하기 때문이다. (구글에 movie API를 검색했을 때도 최상단에 나온다.)다음과 같이 총 4개의 API를 사용했는데 동영상만 유튜브 API를 이용했다.\n영화 상세정보(Get Details)\n영화 등장인물(Get Credits)\n영화 검색(Search Movies)\n영화 동영상(youtube API)\n\n\n\n\n\n\nHTML, CSS 까먹은 부분들 다시 되새기기우리는 디자인이 심플해서 HTML이나 CSS에서 크게 애를 먹은 부분은 없었던 것 같다. 또 중간에 능력자인 상언오빠에게 막히는 부분을 물어봐서 해결했기에 더 수월했다. 메인 페이지에 로고가 가운데 있으면서 오른쪽에 서브 메뉴가 있는 부분 등이 약간 까다로웠는데 다른 팀원들이 구현한 부분 중 내가 감이 안오는 부분도 혼자 시도해봐야겠다.\n\n\nasync/await을 통해 비동기 처리하는 것 익히기2번에서 가져온 API를 사용할 때 async와 await으로 비동기 처리를 해야했다. 대부분 비슷한 과정이라 한 번 하고 나니 어렵지 않고 수월하게 할 수 있었다.\n12345678910111213141516// 영화 API로 popup창 개별 정보 가져오기  const resMovie = await fetch(    `https://api.themoviedb.org/3/movie/$&#123;selectedId&#125;?api_key=$&#123;api_key&#125;&amp;language=ko`  );  const movie = await resMovie.json();  // 배우 API  const resActors = await fetch(    `https://api.themoviedb.org/3/movie/$&#123;selectedId&#125;/credits?api_key=$&#123;api_key&#125;&amp;language=ko`  );  const mainActors = await resActors.json();  const actors = mainActors.cast    .slice(0, 4)    .map((actor) =&gt; actor.name)    .join(&quot;, &quot;);  popup(movie, actors);\n하지만 다음과 같이 db에 있는 정보를 모두 가져와서 가공하는 것이 아닌, 필요한 id만 가져와 유연하게 다루는 방법은 상언오빠의 도움으로 깔끔한 코딩을 할 수 있었다.\n12const res = await fetch(`/users/$&#123;user.id&#125;`);const &#123;bookmarks : oldbookmarks&#125; = await res.json();\n\n\n\n\n\n\nlocal storgae 사용법 익히기저번 해커톤 때 썼던 sessionStorage와 localStorage는 비슷하면서도 차이점이 있다.(참고 : https://ko.javascript.info/localstorage)웹 스토리지 객체(web storage object)인 localStorage와 sessionStorage는 브라우저 내에 키-값 쌍을 저장할 수 있게 해준다. 또한, 두 스토리지 객체는 동일한 메서드와 프로퍼티를 제공한다.\n123456setItem(key, value)  // 키-값 쌍을 보관getItem(key) // 키에 해당하는 값을 받아옴removeItem(key) // 키와 해당 값을 삭제clear() // 모든 것을 삭제key(index) // 인덱스(index)에 해당하는 키를 받아옴length // 저장된 항목의 개수\n이 둘은 제공하는 프로퍼티와 메서드는 같지만 LocalStorage의 기능이 훨씬 제한적이며, 다음과 같은 차이점이 있다.\n\nLocalStorage : 현재 떠 있는 탭 내에서만 유지\nSessionStorage : 동일한 오리진(domain/port/protocol)을 가진 모든 창에서 공유, 브라우저나 OS가 재시작하더라도 데이터가 파기되지 않음.\n\n\n\n\n사용 예1234567891011121314151617181920212223const user = JSON.parse(localStorage.getItem(&quot;login&quot;));// 미 로그인 시 로그인 페이지로 이동if (!user.curlog) &#123;  window.location.href = &#x27;/&#x27;;&#125;// localStorage에 있는 이름을 화면에 렌더링$main__name.innerHTML = user.name;// 로그아웃 버튼 클릭 시 localStorage의 curlog false로 변경$logOut.onclick = (e) =&gt; &#123;  localStorage.setItem(    &quot;login&quot;,    JSON.stringify(&#123;      id: localUser.id,      name: localUser.name,      genre: localUser.genre,      savelog: localUser.savelog,      curlog: false,    &#125;)  );&#125;;\n\n\n\n\n\n\n협업과정에서 유연하게 갈등 관리하는 법 익히기협업과정에서 처음에 주제를 다시 바꾸는 등 삐걱거리는 부분이 많아서 사실 걱정이 되었다. 또 아이디어 회의에서 내가 TV부분은 빼고 영화에만 집중하자고 의견을 강하게 주장해서 다른 팀원들이 불편했을 수도 있었을거란 생각도 들었다. 결과적으로 프로젝트는 성공적으로 마치고 팀원들과도 이전에 비해 더 친해졌지만 중간중간 배울 점들이 많았다.\n상언오빠와 API 맞추기html, css 맞추는 부분에 있어서 오빠가 만든 nav가 내쪽으로 옮겨지는 데 있어서 계속 문제가 생긴 적이 있었다. 그때 친해지기 전이었는데 디버깅을 하는 과정에서 오빠가 에러가 날 때마다 장난으로 “상언님!”하고 불렀는데 결국 내가 오타를 내거나 css에서 태그를 넓게 지정해서 생긴 오류였다. 결국 내 잘못일 수 있는데 장난으로라도 혹여나 상대방 기분을 상하게 하지 않도록 주의하는 자세가 필요하다는 것을 배웠다. 또한 오랫동안 고생했던 디버깅이 알고보니 사소한 오타때문이었다는 것을 알았을 때 허망함을 다시 느끼지 않기 위해 작은 부분도 꼼꼼하게 코딩하는 습관이 곧 디버깅을 줄여주는 지름길이라는 것 또한 느꼈다.\n어진이와 짝코딩search 페이지를 만들때 어진이와 짝코딩으로 시작을 했다. 그 때 CSS를 완벽하게 만들고 갈 지, 아니면 대략적으로 만든 상태에서 JS부터 시작할 지에 대해 의견 충돌이 있었다. 그때 각자의 의견만 주장하는게 아니라 사다리타기로 ‘왕’이랑 ‘신하’를 만들어서 무조건 ‘왕’ 말에 따르고 존중해주기로 했다. 결국 내가 신하가 돼서 어진이 말에 “네~ 알겠습니다~” 하면서 무조건 따랐는데 분위기도 훨씬 유해지고 코딩도 더 수월하게 할 수 있어서 좋은 경험이었다. 꼭 그렇게 역할분담을 하지 않더라도 내가 한 발짝 물러나서 상대의 입장을 귀기울이는 자세가 필요하다는 것을 몸소 느끼는 시간이었다.\n팀장님 진솔언니이번 미니프로젝트를 할 때 팀장님인 진솔언니에게 좋은 follower이자 팀원이 되지 못한 것 같아 미안함과 아쉬움이 많다. 저번 해커톤 때 느낀 건데 내가 실력이 뛰어나지 않더라도 팀원들이 작은 의견 하나에도 나에게 컨펌을 받으며 팀장인 나를 존중해주는 모습이 정말 감사하게 느껴졌었다. 그런데 내가 팀원이 되었을 때 팀장님에게 그런 대우를 해주지 못한 거 같아 반성하게 된다. 사회생활을 하면서는 리더보다 follower의 입장에 더 많이 서게 될텐데 나는 아직 좋은 follower가 되기에 부족한 게 많은 것 같다.\n\n\n\n최종발표 피드백\nAPI 선택 이유, 영화가 배열되는 순서 등 기준 명확히 하고 알아볼 것\n발표도 실전처럼, 기술면접처럼 진지하게 임하기\n구현하는 프로젝트의 의의를 포함하면 Best!→ 클론코딩에서는 실제 사이트의 부족한 부분(1개라도 OK)을 이렇게 보완했다고 어필하는 게 중요함\n내가 만든 페이지에 대해서는 완벽하게 대답할 수 있도록 준비하기\n나뿐 아니라 다른 팀원들이 만든 페이지가 어떻게 구현했는지 제대로 알고 있을 것\n미완성이나 2차구현 등 아쉬운 부분 끝까지 완성하기→ 2차구현 시작 (20.11.23 ~ 20.12.06)→ WATFLECHA 최종 완성본  \n","dateCreated":"2020-11-20T09:11:48+09:00","dateModified":"2021-01-01T13:48:46+09:00","datePublished":"2020-11-20T09:11:48+09:00","description":"\n20-11-20 금요일 미니프로젝트 마지막날 및 최종발표\n\n5일차 피드백 및 총정리","headline":"[미니 프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표","image":["WATFLICHA-logo.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/11/20/20-11-20-TIL/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/11/20/20-11-20-TIL/","keywords":"TIL, 프로젝트, Fastcampus","thumbnailUrl":"WATFLICHA-logo.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\n\n\n오늘 한 것\nsearch 페이지 완성\npopup 눌렀을 때 화면이 맨 위로 올라가는 버그 고치기\n독립적인 파일 스코프를 갖지 않는 JS의 문제점 때문에 변수명 합치고 통일하기\n\n\n팀원 각각 파트 연결되는 부분 통일하고 전체 페이지 git으로 합치기\npopup.js 하나로 만들기(변수명 통일, 중복되는 선언문 지우기 등)\n로그아웃 시 주소창에 페이지 주소 입력해도 접근불가능하게 막기\nlocalstorage에 curlog 키 추가하고 미로그인시 로그인페이지로 이동하게 하기\nhtml titie 통일하기\n이미지 파일 통일하기\n\n\n발표 연습(18:00 ~ 18:40)\n발표 PPT 준비\n리허설 및 각자 질문해주기\n\n\n최종 발표(19:00 ~ 21:00)\n넷플릭스, 왓챠와 비교해 개선한 차이점 정리하기\n다른 팀 발표 듣기 및 피드백\n각자 맡은 파트 별로 발표\n\n\n\n\nWATFLICHA 최종 완성본\n\n미니프로젝트를 통해 얻고 싶은 것 =&gt; 피드백\ngit flow를 통한 협업과정 익히기저번 해커톤 때 git organization을 통해 협업을 했을 때보다 git flow를 쓰는 게 fork하는 한 단계를 더 거치기 때문에 까다롭다고 생각해서 걱정이 많았다. 심지어 리허설로 연습할 때랑 월요일에 시작할때도 오류도 많고 제대로 연습을 못했어서 git이 발목을 잡지는 않을까 생각도 들었다. 하지만 계속 팀원들과 주고받다보니 git flow도 익숙해지고 서로 오류도 찾아내며 고쳐서 git flow에 친숙함을 느끼게 된 시간이었다.\n전체 과정 정리12345678910111213141516171819git clone 내레포주소git remote add pmorigin 팀장주소git flow initgithub에서 이슈 등록 -&gt; 팀장님에게 알려주기(#123-로그인 페이지 구현)git flow feature start 브랜치이름파일에서 코드 작성git add .git commit -m &quot;feat: #123-로그인구현&quot;git flow feature finish 브랜치이름git push origin developgithub에서 Pull requests 요청(주의!!) 팀장 develop ← 자신의 브랜치팀장 - Pull request 받아들이고 합치기git pull pmorigin develop다시 새로운 브랜치 만들어서 작업\n\n\n\n\n\n\n\n\nAPI 사용하기(영화 API)영화 API는 TMDB(The Movie DataBase)의 API를 사용했다. TMDB는 전 세계적으로 가장 유명한 영화 DB를 가진 곳이고 이용 방법이 간단하기 때문이다. (구글에 movie API를 검색했을 때도 최상단에 나온다.)다음과 같이 총 4개의 API를 사용했는데 동영상만 유튜브 API를 이용했다.\n영화 상세정보(Get Details)\n영화 등장인물(Get Credits)\n영화 검색(Search Movies)\n영화 동영상(youtube API)\n\n\n\n\n\n\nHTML, CSS 까먹은 부분들 다시 되새기기우리는 디자인이 심플해서 HTML이나 CSS에서 크게 애를 먹은 부분은 없었던 것 같다. 또 중간에 능력자인 상언오빠에게 막히는 부분을 물어봐서 해결했기에 더 수월했다. 메인 페이지에 로고가 가운데 있으면서 오른쪽에 서브 메뉴가 있는 부분 등이 약간 까다로웠는데 다른 팀원들이 구현한 부분 중 내가 감이 안오는 부분도 혼자 시도해봐야겠다.\n\n\nasync/await을 통해 비동기 처리하는 것 익히기2번에서 가져온 API를 사용할 때 async와 await으로 비동기 처리를 해야했다. 대부분 비슷한 과정이라 한 번 하고 나니 어렵지 않고 수월하게 할 수 있었다.\n12345678910111213141516// 영화 API로 popup창 개별 정보 가져오기  const resMovie = await fetch(    `https://api.themoviedb.org/3/movie/$&#123;selectedId&#125;?api_key=$&#123;api_key&#125;&amp;language=ko`  );  const movie = await resMovie.json();  // 배우 API  const resActors = await fetch(    `https://api.themoviedb.org/3/movie/$&#123;selectedId&#125;/credits?api_key=$&#123;api_key&#125;&amp;language=ko`  );  const mainActors = await resActors.json();  const actors = mainActors.cast    .slice(0, 4)    .map((actor) =&gt; actor.name)    .join(&quot;, &quot;);  popup(movie, actors);\n하지만 다음과 같이 db에 있는 정보를 모두 가져와서 가공하는 것이 아닌, 필요한 id만 가져와 유연하게 다루는 방법은 상언오빠의 도움으로 깔끔한 코딩을 할 수 있었다.\n12const res = await fetch(`/users/$&#123;user.id&#125;`);const &#123;bookmarks : oldbookmarks&#125; = await res.json();\n\n\n\n\n\n\nlocal storgae 사용법 익히기저번 해커톤 때 썼던 sessionStorage와 localStorage는 비슷하면서도 차이점이 있다.(참고 : https://ko.javascript.info/localstorage)웹 스토리지 객체(web storage object)인 localStorage와 sessionStorage는 브라우저 내에 키-값 쌍을 저장할 수 있게 해준다. 또한, 두 스토리지 객체는 동일한 메서드와 프로퍼티를 제공한다.\n123456setItem(key, value)  // 키-값 쌍을 보관getItem(key) // 키에 해당하는 값을 받아옴removeItem(key) // 키와 해당 값을 삭제clear() // 모든 것을 삭제key(index) // 인덱스(index)에 해당하는 키를 받아옴length // 저장된 항목의 개수\n이 둘은 제공하는 프로퍼티와 메서드는 같지만 LocalStorage의 기능이 훨씬 제한적이며, 다음과 같은 차이점이 있다.\n\nLocalStorage : 현재 떠 있는 탭 내에서만 유지\nSessionStorage : 동일한 오리진(domain/port/protocol)을 가진 모든 창에서 공유, 브라우저나 OS가 재시작하더라도 데이터가 파기되지 않음.\n\n\n\n\n사용 예1234567891011121314151617181920212223const user = JSON.parse(localStorage.getItem(&quot;login&quot;));// 미 로그인 시 로그인 페이지로 이동if (!user.curlog) &#123;  window.location.href = &#x27;/&#x27;;&#125;// localStorage에 있는 이름을 화면에 렌더링$main__name.innerHTML = user.name;// 로그아웃 버튼 클릭 시 localStorage의 curlog false로 변경$logOut.onclick = (e) =&gt; &#123;  localStorage.setItem(    &quot;login&quot;,    JSON.stringify(&#123;      id: localUser.id,      name: localUser.name,      genre: localUser.genre,      savelog: localUser.savelog,      curlog: false,    &#125;)  );&#125;;\n\n\n\n\n\n\n협업과정에서 유연하게 갈등 관리하는 법 익히기협업과정에서 처음에 주제를 다시 바꾸는 등 삐걱거리는 부분이 많아서 사실 걱정이 되었다. 또 아이디어 회의에서 내가 TV부분은 빼고 영화에만 집중하자고 의견을 강하게 주장해서 다른 팀원들이 불편했을 수도 있었을거란 생각도 들었다. 결과적으로 프로젝트는 성공적으로 마치고 팀원들과도 이전에 비해 더 친해졌지만 중간중간 배울 점들이 많았다.\n상언오빠와 API 맞추기html, css 맞추는 부분에 있어서 오빠가 만든 nav가 내쪽으로 옮겨지는 데 있어서 계속 문제가 생긴 적이 있었다. 그때 친해지기 전이었는데 디버깅을 하는 과정에서 오빠가 에러가 날 때마다 장난으로 “상언님!”하고 불렀는데 결국 내가 오타를 내거나 css에서 태그를 넓게 지정해서 생긴 오류였다. 결국 내 잘못일 수 있는데 장난으로라도 혹여나 상대방 기분을 상하게 하지 않도록 주의하는 자세가 필요하다는 것을 배웠다. 또한 오랫동안 고생했던 디버깅이 알고보니 사소한 오타때문이었다는 것을 알았을 때 허망함을 다시 느끼지 않기 위해 작은 부분도 꼼꼼하게 코딩하는 습관이 곧 디버깅을 줄여주는 지름길이라는 것 또한 느꼈다.\n어진이와 짝코딩search 페이지를 만들때 어진이와 짝코딩으로 시작을 했다. 그 때 CSS를 완벽하게 만들고 갈 지, 아니면 대략적으로 만든 상태에서 JS부터 시작할 지에 대해 의견 충돌이 있었다. 그때 각자의 의견만 주장하는게 아니라 사다리타기로 ‘왕’이랑 ‘신하’를 만들어서 무조건 ‘왕’ 말에 따르고 존중해주기로 했다. 결국 내가 신하가 돼서 어진이 말에 “네~ 알겠습니다~” 하면서 무조건 따랐는데 분위기도 훨씬 유해지고 코딩도 더 수월하게 할 수 있어서 좋은 경험이었다. 꼭 그렇게 역할분담을 하지 않더라도 내가 한 발짝 물러나서 상대의 입장을 귀기울이는 자세가 필요하다는 것을 몸소 느끼는 시간이었다.\n팀장님 진솔언니이번 미니프로젝트를 할 때 팀장님인 진솔언니에게 좋은 follower이자 팀원이 되지 못한 것 같아 미안함과 아쉬움이 많다. 저번 해커톤 때 느낀 건데 내가 실력이 뛰어나지 않더라도 팀원들이 작은 의견 하나에도 나에게 컨펌을 받으며 팀장인 나를 존중해주는 모습이 정말 감사하게 느껴졌었다. 그런데 내가 팀원이 되었을 때 팀장님에게 그런 대우를 해주지 못한 거 같아 반성하게 된다. 사회생활을 하면서는 리더보다 follower의 입장에 더 많이 서게 될텐데 나는 아직 좋은 follower가 되기에 부족한 게 많은 것 같다.\n\n\n\n최종발표 피드백\nAPI 선택 이유, 영화가 배열되는 순서 등 기준 명확히 하고 알아볼 것\n발표도 실전처럼, 기술면접처럼 진지하게 임하기\n구현하는 프로젝트의 의의를 포함하면 Best!→ 클론코딩에서는 실제 사이트의 부족한 부분(1개라도 OK)을 이렇게 보완했다고 어필하는 게 중요함\n내가 만든 페이지에 대해서는 완벽하게 대답할 수 있도록 준비하기\n나뿐 아니라 다른 팀원들이 만든 페이지가 어떻게 구현했는지 제대로 알고 있을 것\n미완성이나 2차구현 등 아쉬운 부분 끝까지 완성하기→ 2차구현 시작 (20.11.23 ~ 20.12.06)→ WATFLECHA 최종 완성본  \n","dateCreated":"2020-11-20T09:11:48+09:00","dateModified":"2021-05-22T12:05:17+09:00","datePublished":"2020-11-20T09:11:48+09:00","description":"\n20-11-20 금요일 미니프로젝트 마지막날 및 최종발표\n\n5일차 피드백 및 총정리","headline":"[프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표","image":["WATFLICHA-logo.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/11/20/20-11-20-TIL/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/11/20/20-11-20-TIL/","keywords":"TIL, 프로젝트, Fastcampus","thumbnailUrl":"WATFLICHA-logo.png"}</script>
     <meta name="description" content="20-11-20 금요일 미니프로젝트 마지막날 및 최종발표  5일차 피드백 및 총정리">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="[미니 프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표">
+<meta property="og:title" content="[프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표">
 <meta property="og:url" content="https://hanseul-lee.github.io/2020/11/20/20-11-20-TIL/index.html">
 <meta property="og:site_name" content="HS&#39;s blog">
 <meta property="og:description" content="20-11-20 금요일 미니프로젝트 마지막날 및 최종발표  5일차 피드백 및 총정리">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-20T00:11:48.000Z">
-<meta property="article:modified_time" content="2021-01-01T04:48:46.319Z">
+<meta property="article:modified_time" content="2021-05-22T03:05:17.154Z">
 <meta property="article:author" content="Hanseul lee">
 <meta property="article:tag" content="TIL">
 <meta property="article:tag" content="프로젝트">
@@ -154,9 +154,9 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/category-TIL" rel="noopener" title="TIL">
+                        <a class="sidebar-button-link " href="/category-Algorithm" rel="noopener" title="Algorithm">
                         <i class="sidebar-button-icon fa fa-caret-right" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">TIL</span>
+                        <span class="sidebar-button-desc">Algorithm</span>
                     </a>
             </li>
             
@@ -204,7 +204,7 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            [미니 프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표
+            [프로젝트] 20-11-20 금요일 미니프로젝트 마지막날 및 최종발표
         </h1>
     
     
@@ -226,7 +226,7 @@
     <span>LastUpdated  </span>
     <time datetime="2020-11-20T09:11:48+09:00">
         
-                21.01.01 13:48:46
+                21.05.22 12:05:17
             
     </time>
 
@@ -366,7 +366,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/25/20-11-25-WATFLECHA2/" data-tooltip="[미니 프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)" aria-label="PREVIOUS: [미니 프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/25/20-11-25-WATFLECHA2/" data-tooltip="[프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)" aria-label="PREVIOUS: [프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -375,7 +375,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/19/20-11-19-TIL/" data-tooltip="[미니 프로젝트] 20-11-19 목요일 미니프로젝트 4일차" aria-label="NEXT: [미니 프로젝트] 20-11-19 목요일 미니프로젝트 4일차">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/19/20-11-19-TIL/" data-tooltip="[프로젝트] 20-11-19 목요일 미니프로젝트 4일차" aria-label="NEXT: [프로젝트] 20-11-19 목요일 미니프로젝트 4일차">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -425,7 +425,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/25/20-11-25-WATFLECHA2/" data-tooltip="[미니 프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)" aria-label="PREVIOUS: [미니 프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/25/20-11-25-WATFLECHA2/" data-tooltip="[프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)" aria-label="PREVIOUS: [프로젝트] WATFLICHA - 2차 구현 TIL (1주차 : 20.11.23 ~ 20.11.29)">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -434,7 +434,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/19/20-11-19-TIL/" data-tooltip="[미니 프로젝트] 20-11-19 목요일 미니프로젝트 4일차" aria-label="NEXT: [미니 프로젝트] 20-11-19 목요일 미니프로젝트 4일차">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/11/19/20-11-19-TIL/" data-tooltip="[프로젝트] 20-11-19 목요일 미니프로젝트 4일차" aria-label="NEXT: [프로젝트] 20-11-19 목요일 미니프로젝트 4일차">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
