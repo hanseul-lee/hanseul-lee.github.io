@@ -9,8 +9,36 @@
     <atom:link href="https://hanseul-lee.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 11 Mar 2021 15:47:45 GMT</pubDate>
+    <pubDate>Sat, 22 May 2021 03:48:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[프로그래머스] Level.1 소수찾기 (JavaScript)</title>
+      <link>https://hanseul-lee.github.io/2021/05/22/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/</link>
+      <guid>https://hanseul-lee.github.io/2021/05/22/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/</guid>
+      <pubDate>Sat, 22 May 2021 03:46:55 GMT</pubDate>
+      
+      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;[프로그래머스] Level.1 소수찾기 (JavaScript)&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<!-- excerpt --><h1 id="프로그래머스-Level-1-소수찾기-JavaScript"><a href="#프로그래머스-Level-1-소수찾기-JavaScript" class="headerlink" title="[프로그래머스] Level.1 소수찾기 (JavaScript)"></a>[프로그래머스] Level.1 소수찾기 (JavaScript)</h1>]]></content:encoded>
+      
+      
+      <category domain="https://hanseul-lee.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://hanseul-lee.github.io/categories/Algorithm/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</category>
+      
+      
+      <category domain="https://hanseul-lee.github.io/tags/Algorithm/">Algorithm</category>
+      
+      <category domain="https://hanseul-lee.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</category>
+      
+      
+      <comments>https://hanseul-lee.github.io/2021/05/22/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[프로젝트] SweetyPie - Airbnb 클론코딩을 마치며</title>
@@ -544,33 +572,6 @@
       
       
       <comments>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[프로젝트] WATFLICHA - 영화 정보 사이트</title>
-      <link>https://hanseul-lee.github.io/2020/12/05/20-11-20-WATFLICHA/</link>
-      <guid>https://hanseul-lee.github.io/2020/12/05/20-11-20-WATFLICHA/</guid>
-      <pubDate>Sat, 05 Dec 2020 02:46:21 GMT</pubDate>
-      
-      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;p&gt;[미니 프로젝트]&lt;br&gt;WATFLICHA ( 1차 : 20.11.16 ~ 20.11.20 / 2차 : 20.11.22 ~ 20.12.06)&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<!-- excerpt --><blockquote><p>패스트 캠퍼스 FE스쿨 Javascript 프로젝트에서 진행한 프로젝트 사이트 WATFLICHA입니다.<br><a href="https://github.com/hanseul-lee/WATFLECHA">WATFLICHA github</a></p></blockquote><br><div class="figure center" style="width:;"><img class="fig-img" src="main.png" alt=""></div><br><h1 id="프로젝트-목표"><a href="#프로젝트-목표" class="headerlink" title="프로젝트 목표"></a>프로젝트 목표</h1><blockquote><p>넷플리스나 왓챠와 같은 OTT서비스를 클론 코딩 및 개선하여 WATFLECHA라는 영화 정보 사이트를 구현한다.</p></blockquote><h1 id="서비스-기능"><a href="#서비스-기능" class="headerlink" title="서비스 기능"></a>서비스 기능</h1><h3 id="1-로그인-페이지"><a href="#1-로그인-페이지" class="headerlink" title="1. 로그인 페이지"></a>1. 로그인 페이지</h3><ul><li>아이디, 비밀번호 값이 공백이거나, 회원가입 한 아이디가 없으면 에러 메세지를 출력해준다.</li><li>아이디 정보 저장 버튼을 체크했을 시, 한 번이라도 로그인하였다면 다음 로그인 화면에서 아이디가 남아있도록 했다.</li><li>아이디, 비밀번호를 올바르게 입력한 경우, 왓플릭차 메인페이지로 로그인되어 이동한다. 이때 이름, 아이디, 선호장르, 로그인 정보 저장 여부 및 현재 로그인 상태가 local storage에 담긴다.</li></ul><h3 id="2-회원가입-페이지"><a href="#2-회원가입-페이지" class="headerlink" title="2. 회원가입 페이지"></a>2. 회원가입 페이지</h3><ul><li>이름, 아이디, 비밀번호 입력 창에 공백 또는 정해진 아이디, 비밀번호 생성 규칙에 맞지 않은 경우 에러 메세지를 출력해준다.</li><li>아이디와 비밀번호는 4 ~ 15자리 영문 혹은 숫자, 이름은 1자 이상 영문, 한글, 숫자를 입력할 수 있게 했다.</li><li>비밀번호와 재확인 입력창이 같지 않은 경우, 에러 메세지를 출력해준다.</li><li>선호 장르를 선택하지 않은 경우, 에러 메세지를 출력해준다.</li><li>모든 조건을 맞춘 경우, 입력한 이름, 아이디, 비밀번호, 선호 장르를 DB에 전송하고 회원가입이 완료된다.</li></ul><h3 id="3-회원-정보-수정-페이지"><a href="#3-회원-정보-수정-페이지" class="headerlink" title="3. 회원 정보 수정 페이지"></a>3. 회원 정보 수정 페이지</h3><ul><li>이름, 비밀번호, 장르를 수정할 수 있다. (아이디는 수정 불가)</li><li>연필 아이콘 클릭 시 입력창에 값을 입력할 수 있다.</li><li>DB에 담긴 기존 정보와 비교해 값이 변경된 경우, 입력창 색이 초록색으로 바뀐다.</li><li>입력한 아이디, 비밀번호, 이름이 정규표현식 조건과 맞지 않는다면 에러 메세지를 출력해준다.</li><li>기존 비밀번호 및 비밀번호와 재확인 입력창이 같지 않은 경우, 에러 메세지를 출력해준다.</li><li>모든 조건에 맞게 정보를 수정하였을 경우, 입력한 이름, 아이디, 비밀번호, 선호 장르를 DB와 local storage(비밀번호 제외)에 전송하고 회원가입이 완료된다.</li></ul><h3 id="4-메인-페이지"><a href="#4-메인-페이지" class="headerlink" title="4. 메인 페이지"></a>4. 메인 페이지</h3><ul><li>메인화면 가장 위쪽에 화면이 꽉 차도록 영화 예고편을 무한 재생되도록 보여준다.</li><li>상단의 원하는 장르 클릭 시, 선택된 장르 페이지로 넘어간다.</li><li>영화 API에서 TOP20, 최신 영화 및 취향 저격 영화에 맞는 영화 목록을 불러와 슬라이드 형식으로 제공한다.</li><li>슬라이드의 이전, 다음 버튼 클릭 시, 좌우로 슬라이드가 넘어간다. 넘어간 슬라이드는 무한형식으로 일정 슬라이드를 넘어가면 처음이나 맨 끝으로 돌아간다.</li></ul><h3 id="5-팝업-페이지"><a href="#5-팝업-페이지" class="headerlink" title="5. 팝업 페이지"></a>5. 팝업 페이지</h3><ul><li>메인, 장르, 검색, 찜하기 페이지에서 원하는 영화를 클릭했을 때 팝업창이 보인다.</li><li>영화 API를 통해 제목, 평점, 예고편, 줄거리, 개봉일, 장르, 총 상영 시간, 출연 배우 정보가 렌더링 되도록 했다.</li><li>하트 버튼을 누르면 하트 애니메이션이 나타나고 ‘찜 완료!’로 표시가 되며, 북마크에 찜한 영화가 담긴다.</li><li>찜한 영화에서 다시 하트 버튼을 누르면 글자가 ‘찜하기’로 바뀌고 북마크에서 찜한 영화를 제거한다.</li></ul><h3 id="6-장르-페이지"><a href="#6-장르-페이지" class="headerlink" title="6. 장르 페이지"></a>6. 장르 페이지</h3><ul><li>메인 페이지에서 선택한 장르의 영화들이 렌더링 된다.</li><li>장르 페이지에서 다른 장르 클릭 시, 선택한 장르의 영화들이 렌더링 된다.</li><li>페이지네이션을 구현해 사용자가 원하는 페이지로 이동할 수 있게 했다.</li></ul><h3 id="7-검색-페이지"><a href="#7-검색-페이지" class="headerlink" title="7. 검색 페이지"></a>7. 검색 페이지</h3><ul><li>원하는 영화를 검색하면 검색 API에 의해 검색된 정보가 렌더링 된다.</li><li>더 보기 버튼 클릭 시, 다음 페이지가 아래에 이어 렌더링 되며 마지막 페이지라면 더 보기 버튼이 사라진다.</li></ul><h3 id="8-북마크-페이지"><a href="#8-북마크-페이지" class="headerlink" title="8. 북마크 페이지"></a>8. 북마크 페이지</h3><ul><li>DB에 저장된 북마크 영화들을 볼 수 있다.</li><li>북마크 페이지에서 팝업창을 통해 원하는 영화의 북마크를 제거할 수 있다.</li></ul><h1 id="개발기간"><a href="#개발기간" class="headerlink" title="개발기간"></a>개발기간</h1><hr><p>1차 구현 : 20.11.16 - 20.11.20<br>2차 구현 : 20.11.22 - 20.12.06</p><h1 id="기술스택-amp-툴"><a href="#기술스택-amp-툴" class="headerlink" title="기술스택 &amp; 툴"></a>기술스택 &amp; 툴</h1><hr><h3 id="Front-End"><a href="#Front-End" class="headerlink" title="Front-End"></a>Front-End</h3><ul><li>HTML</li><li>CSS</li><li>Javascript</li></ul><h3 id="협업"><a href="#협업" class="headerlink" title="협업"></a>협업</h3><ul><li>git/github</li><li>Slack</li></ul><h3 id="개발-프로세스"><a href="#개발-프로세스" class="headerlink" title="개발 프로세스"></a>개발 프로세스</h3><ul><li>Agile - Scrum</li></ul><br><h1 id="팀원"><a href="#팀원" class="headerlink" title="팀원"></a>팀원</h1><hr><ul><li><a href="https://github.com/Alex-Eojin">김어진</a> - 기획, 2,3 페이지 HTML/CSS/JS,<br>2차 구현(2,3 페이지 리팩토링, 6 장르 페이지 추가, 6,7 페이지 페이지네이션 추가)</li><li><a href="https://github.com/parksaneon">박상언</a> - 기획, 4,5 페이지 HTML/CSS/JS, 전반적인 진행사항 QA역할</li><li><a href="https://github.com/do-mandoo">원진솔</a> - 기획, 1 페이지 HTML/CSS/JS, github 관리</li><li><a href="https://github.com/hanseul-lee">이한슬</a> - 기획, 5,7,8 페이지 HTML/CSS/JS,<br>2차 구현(2,3 페이지 리팩토링, 6 장르 페이지 추가, 6,7 페이지 페이지네이션 추가)</li></ul>]]></content:encoded>
-      
-      
-      <category domain="https://hanseul-lee.github.io/categories/project/">project</category>
-      
-      
-      <category domain="https://hanseul-lee.github.io/tags/Fastcampus/">Fastcampus</category>
-      
-      <category domain="https://hanseul-lee.github.io/tags/WATFLICHA/">WATFLICHA</category>
-      
-      
-      <comments>https://hanseul-lee.github.io/2020/12/05/20-11-20-WATFLICHA/#disqus_thread</comments>
       
     </item>
     
