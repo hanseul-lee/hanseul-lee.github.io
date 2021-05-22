@@ -16,7 +16,7 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss2.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n","dateCreated":"2021-02-22T23:26:27+09:00","dateModified":"2021-03-11T22:38:39+09:00","datePublished":"2021-02-22T23:26:27+09:00","description":"\nSweetyPie - Airbnb 클론코딩 TIL (2주차: 21.02.08 ~ 21.02.14)\n\n21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙\n배포 전 디테일한 작업 마무리, 모든 페이지 통합 및 netlify를 이용한 배포\n","headline":"[프로젝트] SweetyPie - Airbnb 클론코딩 TIL (4주차: 21.02.22 ~ 21.02.26)","image":["logo.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/","keywords":"프로젝트, Fastcampus, SweetyPie","thumbnailUrl":"logo.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\n\n21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙1일차 - 21.02.22 월요일\n오늘 할 것\n\n 북마크 api 요청(POST, DELETE) 에러 수정\n Payment - day 연동하기\n url과 인원수 연동하기\n 후기 0개 일 때, 레이아웃 만들기\n Header - 스크롤 시 nav Header보이게 하기\n 랜덤 프로필 사진\n url에 날짜 존재하지 않을 때 에러 고치기\n 스켈레톤 UI 구현\n 환불 모달 만들기\n\n\n오늘 배운 것\n\n|| → 더하기로 생각하기&amp;&amp; → 곱하기로 생각하기\n\n\n\n\n\n2일차 - 21.02.23 화요일\n오늘 할 것\n\n북마크 api 요청(POST, DELETE) 에러 수정\n\n팝업창 background 클릭 시 닫히게 하는 라이브러리 적용\n\nHeader 합치기\n\n  랜덤 프로필 사진\n\n  모달창 close 애니메이션 적용\n\n  모든 페이지에 헬멧 적용\n\nurl과 인원수 팝업 내 연동 에러 고치기\n\n  스켈레톤 UI 구현\n\n  환불 모달 만들기\n\n\n\n\n\n\n\n우영강사님 트러블슈팅 (10:00 ~ 10:50)\n이 버전이 올라가는데 수행된 릴리즈 이슈 적기\n릴리즈 관련 이슈 해결 과정12345678$ git add .$ git commit$ git flow release start 0.3.1$ git flow release finish 0.3.1$ git push origin develop (develop)$ git checkout main$ git push origin main (main)$ git push origin 0.3.1\nrun server할때 port 설정 주의할 것ENV.PORT || 4040 로 설정하자\n배포 후 https 써보기\n\n\n\n\n\n\n발표 TIP\n아무것도 모르고 우리의 프로젝트를 처음 보는 사람에게 발표한다고 생각하고 준비할 것\n쭉 설명하고 화면 시연 (X) → 왔다갔다하더라도 기능별로 설명하고 시연\n프론트따로, 백엔드 따로(X) → 프론트와 백엔드가 함께 발표\n결론 ⇒프로젝트를 통해 느낀점 / 아쉬웠던 점 / 개선 할 점(다음프로젝트 때 보완할 것)\n발표기준 - 발표자료 / 구성 / 발표태도 / 어조\n마지막 릴리즈 때는 버전 1.0.0으로 올려줄 것\n\n\n\n\n\n\n오늘 배운 것\n\n폴더 이름 바꾸기상위 폴더로 들어간 후 git mv oldName newName만약 하위에 바꾸려고 하는 이름과 중복된 파일 이름이 존재한다면 에러가 뜰 수 있는데 이때 다른 이름으로 변경 후 다시 원하는 이름으로 한 번 더 고쳐주면 해결 가능함\n1234// Main을 main으로 바꾸고 싶은데// 해당 폴더 내에 main.jsx가 존재해서 에러가 발생할 때$ git mv Main main123$ git mv main123 main\ncf. 참고:https://www.lesstif.com/gitbook/git-git-rename-file-or-folder-54952878.html\n\n\n이미 push된 파일 gitignore 적용하기\n1234$ git rm -r --cached .$ git add .$ git commit -m &quot;Apply .gitignore&quot;$ git push\ncf. 참고: https://cjh5414.github.io/gitignore-update/\n\n\n\n\n배포 과정 중 에러npm run build를 CI= npm run build로 고치기cf. 참고: https://www.youtube.com/watch?v=i8jkGjIIHo8\n\n\nmanifast.json / opengraph / (structured data) ⇒ SEO에 good!\n\nrobots.txtDisallow에 /추가 → 모두 검색 방지 \n123# https:&#x2F;&#x2F;www.robotstxt.org&#x2F;robotstxt.htmlUser-agent: *Disallow: &#x2F;\nhttps로 백엔드와 맞추기\n&#123;% image center https.png 600px %&#125;\n\n예쁜숙소 - 7774, 7779, 10301, 10337,10506\n\n\n우영강사님 “이렇게 배우는 거죠 저도”멘토와 같은 강사님께서 우리 트러블 슈팅을 하면서 하신 말씀이 기억에 남는다. 실력과 경력이 더 쌓이고 난 후에도 우영 강사님처럼 작은 순간마저 겸손하게 받아들이고 배워나가려는 자세를 갖춘 개발자로 성장할 수 있을까. 정말 정말 본받고 싶은 자세이다.\n\n\n\n\n3일차 - 21.02.24 수요일\n오늘 할 것\n\n모달창 background 클릭 시 닫히게 하는 라이브러리 적용\n\n프로필 사진 수정\n\n  모달창 close 애니메이션 적용\n\n모든 페이지에 헬멧으로 title 적용\n\n헤더에 예약하기 버튼 추가\n\n헤더 3단변신 구현\n\n  url가져오기 부분 → useLocation으로 바꾸기\n\nfooter 부분 스타일 고치기\n\n리뷰클릭시 프로필 이미지 이상하게 나오는 것 고치기\n\n북마크에서 하트누르면 바로 반영되게 하기\n\nairbnbHover 색깔 진하게 바꾸기\n\n  Calendar 백그라운드 투명하지 않게 바꾸기\n\n\n공통\n\nmeta태그 통일\n\n주석 및 ESLint 에러 모두 고치기\n\n\n\n\nmark 강사님 트러블 슈팅 (18:00 ~ 18:50)\n\ntailwind.config.js 에 그 전 tailwind 옮겨 넣기\noutpus.css 제거\nnpm run build에서 minifiy, uglyfy 자동으로 해줌\nnpx serve -s build (-s : SPA)★-s 옵션을 붙이면 페이지가 존재하지 않을 때 자동으로 index.html으로 보내줌\ndependency관련 에러는 반드시 해결할 것\nlet이 아니라 const 사용\nuseMemo → 쓰지말고 useLocaion Hook으로 할 것\nuseMemo → 쓰지말고 useLocaion Hook으로 할 것\n\n\n\n최종 프로젝트 완성 시 중점으로 볼 것\n\n\n레이아웃이 안맞는 것(ex. max-width)코드를 보기 전 레이아웃이 깨져있으면 코드로 넘어가기도 싫음\n기능적으로 문제가 없는지 팀원들끼리 코드 리뷰ex) ESLint Error, 컴포넌트를 제대로 나누는 것, url을 제대로 가져오지 않은 것 등\n지금은 시간내에 완성도 있게 만드는 게 더 중요 - 발표할 때 우리 netlify로 배포한 것 보여주면서 테스트 해보라고 자신있게 만들 수 있을 정도로!\n\n\n\n\n\n4일차 - 21.02.25 목요일\n오늘 할 것\n\n 북마크 기능 리팩토링\n\n\n고쳐야 할 것\n\n 캘린더 팝업에서 오늘 이전 날짜 막기\n 버튼 통일하기\n\n\n오늘 배운 것\n\n북마크 기능\n수정 전수정 전\n수정 후수정 후\n\n\n\n\n\n\n\n\n\n5일차 - 21.02.26 금요일\n최종발표 PPThttps://www.miricanvas.com/v/19j7u1\nBackend API POSTMANhttps://documenter.getpostman.com/view/14479786/TWDUrJpP#f3828b6b-8029-4da0-87e3-84cc50e8c029\n\n\n\n\n일정을 맞추는 건 생명선, 품질은 자존심\n\n배포가 매일 이루어지는만큼 변경사항에 대한 소통이 바로바로 이루어져야 한다는 것을 배움by 복복\n\n\n앞으로 인생에서 같이 일하는 사람이 누구냐가 정말 중요\n\n항상 배울 수 있는 동료가 있는 회사를 꼭 선택할 것\n\n2조 슬랙방이 제일 쾌할하고 활발했다고 생각했음 by Mark💛\n\n","dateCreated":"2021-02-22T23:26:27+09:00","dateModified":"2021-05-22T15:25:54+09:00","datePublished":"2021-02-22T23:26:27+09:00","description":"\nSweetyPie - Airbnb 클론코딩 TIL (2주차: 21.02.08 ~ 21.02.14)\n\n21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙\n배포 전 디테일한 작업 마무리, 모든 페이지 통합 및 netlify를 이용한 배포\n","headline":"[프로젝트] SweetyPie - Airbnb 클론코딩 TIL (4주차: 21.02.22 ~ 21.02.26)","image":["logo.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/","keywords":"프로젝트, Fastcampus, SweetyPie","thumbnailUrl":"logo.png"}</script>
     <meta name="description" content="SweetyPie - Airbnb 클론코딩 TIL (2주차: 21.02.08 ~ 21.02.14)  21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙 배포 전 디테일한 작업 마무리, 모든 페이지 통합 및 netlify를 이용한 배포">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="[프로젝트] SweetyPie - Airbnb 클론코딩 TIL (4주차: 21.02.22 ~ 21.02.26)">
@@ -24,13 +24,16 @@
 <meta property="og:site_name" content="HS&#39;s blog">
 <meta property="og:description" content="SweetyPie - Airbnb 클론코딩 TIL (2주차: 21.02.08 ~ 21.02.14)  21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙 배포 전 디테일한 작업 마무리, 모든 페이지 통합 및 netlify를 이용한 배포">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/before.png">
+<meta property="og:image" content="https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/after.png">
 <meta property="article:published_time" content="2021-02-22T14:26:27.000Z">
-<meta property="article:modified_time" content="2021-03-11T13:38:39.529Z">
+<meta property="article:modified_time" content="2021-05-22T06:25:54.421Z">
 <meta property="article:author" content="Hanseul lee">
 <meta property="article:tag" content="프로젝트">
 <meta property="article:tag" content="Fastcampus">
 <meta property="article:tag" content="SweetyPie">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/before.png">
     
     
         
@@ -226,7 +229,7 @@
     <span>LastUpdated  </span>
     <time datetime="2021-02-22T23:26:27+09:00">
         
-                21.03.11 22:38:39
+                21.05.22 15:25:54
             
     </time>
 
@@ -239,7 +242,219 @@
     <div class="post-content markdown">
         <div class="main-content-wrap">
             <!-- excerpt -->
-<h1 id="table-of-contents">Table of Contents</h1>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-02-17-%EC%88%98-21-02-27-%EC%9D%BC-%ED%99%8D%EB%8C%80-%EC%97%90%EC%96%B4%EB%B9%84%EC%95%A4%EB%B9%84-%ED%95%A9%EC%88%99"><span class="toc-text">21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EC%9D%BC%EC%B0%A8-21-02-22-%EC%9B%94%EC%9A%94%EC%9D%BC"><span class="toc-text">1일차 - 21.02.22 월요일</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EC%9D%BC%EC%B0%A8-21-02-23-%ED%99%94%EC%9A%94%EC%9D%BC"><span class="toc-text">2일차 - 21.02.23 화요일</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EC%9D%BC%EC%B0%A8-21-02-24-%EC%88%98%EC%9A%94%EC%9D%BC"><span class="toc-text">3일차 - 21.02.24 수요일</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EC%9D%BC%EC%B0%A8-21-02-25-%EB%AA%A9%EC%9A%94%EC%9D%BC"><span class="toc-text">4일차 - 21.02.25 목요일</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EC%9D%BC%EC%B0%A8-21-02-26-%EA%B8%88%EC%9A%94%EC%9D%BC"><span class="toc-text">5일차 - 21.02.26 금요일</span></a></li></ol></li></ol>
+
+<h2 id="21-02-17-수-21-02-27-일-홍대-에어비앤비-합숙"><a href="#21-02-17-수-21-02-27-일-홍대-에어비앤비-합숙" class="headerlink" title="21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙"></a>21.02.17(수) ~ 21.02.27(일) : 홍대 에어비앤비 합숙</h2><h3 id="1일차-21-02-22-월요일"><a href="#1일차-21-02-22-월요일" class="headerlink" title="1일차 - 21.02.22 월요일"></a>1일차 - 21.02.22 월요일</h3><ul>
+<li><p>오늘 할 것</p>
+<ul>
+<li><input disabled type="checkbox"> 북마크 api 요청(POST, DELETE) 에러 수정</li>
+<li><input checked disabled type="checkbox"> <del>Payment - day 연동하기</del></li>
+<li><input checked disabled type="checkbox"> <del>url과 인원수 연동하기</del></li>
+<li><input checked disabled type="checkbox"> <del>후기 0개 일 때, 레이아웃 만들기</del></li>
+<li><input checked disabled type="checkbox"> <del>Header - 스크롤 시 nav Header보이게 하기</del></li>
+<li><input disabled type="checkbox"> 랜덤 프로필 사진</li>
+<li><input checked disabled type="checkbox"> <del>url에 날짜 존재하지 않을 때 에러 고치기</del><br></li>
+<li><input disabled type="checkbox"> 스켈레톤 UI 구현</li>
+<li><input disabled type="checkbox"> 환불 모달 만들기</li>
+</ul>
+</li>
+<li><p>오늘 배운 것</p>
+<ol>
+<li>|| → 더하기로 생각하기<br>&amp;&amp; → 곱하기로 생각하기<br>
+
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="2일차-21-02-23-화요일"><a href="#2일차-21-02-23-화요일" class="headerlink" title="2일차 - 21.02.23 화요일"></a>2일차 - 21.02.23 화요일</h3><ul>
+<li><p>오늘 할 것</p>
+<ul>
+<li><p><del>북마크 api 요청(POST, DELETE) 에러 수정</del></p>
+</li>
+<li><p><del>팝업창 background 클릭 시 닫히게 하는 라이브러리 적용</del></p>
+</li>
+<li><p><del>Header 합치기</del></p>
+</li>
+<li><p><input disabled type="checkbox">  랜덤 프로필 사진</p>
+</li>
+<li><p><input disabled type="checkbox">  모달창 close 애니메이션 적용</p>
+</li>
+<li><p><input disabled type="checkbox">  모든 페이지에 헬멧 적용</p>
+</li>
+<li><p><del>url과 인원수 팝업 내 연동 에러 고치기</del></p>
+<br></li>
+<li><p><input disabled type="checkbox">  스켈레톤 UI 구현</p>
+</li>
+<li><p><input disabled type="checkbox">  환불 모달 만들기</p>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><strong>우영강사님 트러블슈팅 (10:00 ~ 10:50)</strong><ul>
+<li>이 버전이 올라가는데 수행된 릴리즈 이슈 적기</li>
+<li>릴리즈 관련 이슈 해결 과정<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit</span><br><span class="line">$ git flow release start 0.3.1</span><br><span class="line">$ git flow release finish 0.3.1</span><br><span class="line">$ git push origin develop (develop)</span><br><span class="line">$ git checkout main</span><br><span class="line">$ git push origin main (main)</span><br><span class="line">$ git push origin 0.3.1</span><br></pre></td></tr></table></figure></li>
+<li>run server할때 port 설정 주의할 것<br><code>ENV.PORT || 4040</code> 로 설정하자</li>
+<li>배포 후 https 써보기</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>발표 TIP<ul>
+<li>아무것도 모르고 우리의 프로젝트를 처음 보는 사람에게 발표한다고 생각하고 준비할 것</li>
+<li>쭉 설명하고 화면 시연 (X) → 왔다갔다하더라도 기능별로 설명하고 시연</li>
+<li>프론트따로, 백엔드 따로(X) → 프론트와 백엔드가 함께 발표</li>
+<li>결론 ⇒<br>프로젝트를 통해 느낀점 / 아쉬웠던 점 / 개선 할 점(다음프로젝트 때 보완할 것)</li>
+<li>발표기준 - 발표자료 / 구성 / 발표태도 / 어조</li>
+<li>마지막 릴리즈 때는 버전 1.0.0으로 올려줄 것</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li><p>오늘 배운 것</p>
+<ul>
+<li><p>폴더 이름 바꾸기<br>상위 폴더로 들어간 후 <code>git mv oldName newName</code><br>만약 하위에 바꾸려고 하는 이름과 중복된 파일 이름이 존재한다면 에러가 뜰 수 있는데 이때 다른 이름으로 변경 후 다시 원하는 이름으로 한 번 더 고쳐주면 해결 가능함</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Main을 main으로 바꾸고 싶은데</span><br><span class="line">// 해당 폴더 내에 main.jsx가 존재해서 에러가 발생할 때</span><br><span class="line">$ git mv Main main123</span><br><span class="line">$ git mv main123 main</span><br></pre></td></tr></table></figure>
+<p>cf. 참고:<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.lesstif.com/gitbook/git-git-rename-file-or-folder-54952878.html">https://www.lesstif.com/gitbook/git-git-rename-file-or-folder-54952878.html</a></p>
+<br>
+</li>
+<li><p>이미 push된 파일 gitignore 적용하기</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached .</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&quot;Apply .gitignore&quot;</span></span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<p>cf. 참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cjh5414.github.io/gitignore-update/">https://cjh5414.github.io/gitignore-update/</a></p>
+<br>
+</li>
+</ul>
+</li>
+<li><p>배포 과정 중 에러<br><code>npm run build</code>를 <code>CI= npm run build</code>로 고치기<br>cf. 참고: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=i8jkGjIIHo8">https://www.youtube.com/watch?v=i8jkGjIIHo8</a></p>
+<br>
+</li>
+<li><p>manifast.json / opengraph / (structured data) ⇒ SEO에 good!</p>
+</li>
+<li><p>robots.txt<br>Disallow에 /추가 → 모두 검색 방지 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># https:&#x2F;&#x2F;www.robotstxt.org&#x2F;robotstxt.html</span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: &#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><p>https로 백엔드와 맞추기</p>
+<pre><code>&#123;% image center https.png 600px %&#125;</code></pre>
+</li>
+<li><p>예쁜숙소 - 7774, 7779, 10301, 10337,10506</p>
+<br>
+</li>
+<li><p>우영강사님 “이렇게 배우는 거죠 저도”<br>멘토와 같은 강사님께서 우리 트러블 슈팅을 하면서 하신 말씀이 기억에 남는다. 실력과 경력이 더 쌓이고 난 후에도 우영 강사님처럼 작은 순간마저 겸손하게 받아들이고 배워나가려는 자세를 갖춘 개발자로 성장할 수 있을까. 정말 정말 본받고 싶은 자세이다.</p>
+</li>
+</ul>
+<br>
+
+<h3 id="3일차-21-02-24-수요일"><a href="#3일차-21-02-24-수요일" class="headerlink" title="3일차 - 21.02.24 수요일"></a>3일차 - 21.02.24 수요일</h3><ul>
+<li><p>오늘 할 것</p>
+<ul>
+<li><p><del>모달창 background 클릭 시 닫히게 하는 라이브러리 적용</del></p>
+</li>
+<li><p><del>프로필 사진 수정</del></p>
+</li>
+<li><p><input disabled type="checkbox">  모달창 close 애니메이션 적용</p>
+</li>
+<li><p><del>모든 페이지에 헬멧으로 title 적용</del></p>
+</li>
+<li><p><del>헤더에 예약하기 버튼 추가</del></p>
+</li>
+<li><p><del>헤더 3단변신 구현</del></p>
+</li>
+<li><p><input disabled type="checkbox">  url가져오기 부분 → useLocation으로 바꾸기</p>
+</li>
+<li><p><del>footer 부분 스타일 고치기</del></p>
+</li>
+<li><p><del>리뷰클릭시 프로필 이미지 이상하게 나오는 것 고치기</del></p>
+</li>
+<li><p><del>북마크에서 하트누르면 바로 반영되게 하기</del></p>
+</li>
+<li><p><del>airbnbHover 색깔 진하게 바꾸기</del></p>
+</li>
+<li><p><input disabled type="checkbox">  Calendar 백그라운드 투명하지 않게 바꾸기</p>
+<br>
+
+<p>공통</p>
+</li>
+<li><p><del>meta태그 통일</del></p>
+</li>
+<li><p><del>주석 및 ESLint 에러 모두 고치기</del></p>
+<br>
+</li>
+</ul>
+</li>
+<li><p><strong>mark 강사님 트러블 슈팅 (18:00 ~ 18:50)</strong></p>
+<ol>
+<li>tailwind.config.js 에 그 전 tailwind 옮겨 넣기</li>
+<li>outpus.css 제거</li>
+<li>npm run build에서 minifiy, uglyfy 자동으로 해줌</li>
+<li><code>npx serve -s build</code> (-s : SPA)<br>★-s 옵션을 붙이면 페이지가 존재하지 않을 때 자동으로 index.html으로 보내줌</li>
+<li>dependency관련 에러는 반드시 해결할 것</li>
+<li>let이 아니라 const 사용</li>
+<li>useMemo → 쓰지말고 useLocaion Hook으로 할 것</li>
+<li>useMemo → 쓰지말고 useLocaion Hook으로 할 것<br>
+</li>
+</ol>
+<ul>
+<li><strong>최종 프로젝트 완성 시 중점으로 볼 것</strong></li>
+</ul>
+<ol>
+<li>레이아웃이 안맞는 것(ex. max-width)<br>코드를 보기 전 레이아웃이 깨져있으면 코드로 넘어가기도 싫음</li>
+<li>기능적으로 문제가 없는지 팀원들끼리 코드 리뷰<br>ex) ESLint Error, 컴포넌트를 제대로 나누는 것, url을 제대로 가져오지 않은 것 등</li>
+<li>지금은 시간내에 완성도 있게 만드는 게 더 중요 - 발표할 때 우리 netlify로 배포한 것 보여주면서 테스트 해보라고 자신있게 만들 수 있을 정도로!<br>
+
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="4일차-21-02-25-목요일"><a href="#4일차-21-02-25-목요일" class="headerlink" title="4일차 - 21.02.25 목요일"></a>4일차 - 21.02.25 목요일</h3><ul>
+<li><p>오늘 할 것</p>
+<ul>
+<li><input checked disabled type="checkbox"> <del>북마크 기능 리팩토링</del></li>
+</ul>
+</li>
+<li><p>고쳐야 할 것</p>
+<ul>
+<li><input disabled type="checkbox"> 캘린더 팝업에서 오늘 이전 날짜 막기</li>
+<li><input disabled type="checkbox"> 버튼 통일하기</li>
+</ul>
+</li>
+<li><p>오늘 배운 것</p>
+<ul>
+<li>북마크 기능<ul>
+<li>수정 전<div class="figure center" style="width:600px;"><img class="fig-img" src="before.png" style="width:600px;" alt="수정 전"><span class="caption">수정 전</span></div></li>
+<li>수정 후<div class="figure center" style="width:600px;"><img class="fig-img" src="after.png" style="width:600px;" alt="수정 후"><span class="caption">수정 후</span></div>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<h3 id="5일차-21-02-26-금요일"><a href="#5일차-21-02-26-금요일" class="headerlink" title="5일차 - 21.02.26 금요일"></a>5일차 - 21.02.26 금요일</h3><ul>
+<li>최종발표 PPT<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.miricanvas.com/v/19j7u1">https://www.miricanvas.com/v/19j7u1</a></li>
+<li>Backend API POSTMAN<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://documenter.getpostman.com/view/14479786/TWDUrJpP#f3828b6b-8029-4da0-87e3-84cc50e8c029">https://documenter.getpostman.com/view/14479786/TWDUrJpP#f3828b6b-8029-4da0-87e3-84cc50e8c029</a></li>
+</ul>
+<br>
+
+<ul>
+<li><p>일정을 맞추는 건 생명선, 품질은 자존심</p>
+</li>
+<li><p>배포가 매일 이루어지는만큼 변경사항에 대한 소통이 바로바로 이루어져야 한다는 것을 배움<br>by 복복</p>
+<br>
+</li>
+<li><p>앞으로 인생에서 같이 일하는 사람이 누구냐가 정말 중요</p>
+</li>
+<li><p>항상 배울 수 있는 동료가 있는 회사를 꼭 선택할 것</p>
+</li>
+<li><p>2조 슬랙방이 제일 쾌할하고 활발했다고 생각했음 by Mark💛</p>
+</li>
+</ul>
             
 
 

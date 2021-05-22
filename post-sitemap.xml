@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/</loc>
+        <lastmod>2021-05-22T06:25:54.421Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hanseul-lee.github.io/2021/05/22/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/</loc>
-        <lastmod>2021-05-22T03:51:50.533Z</lastmod>
+        <lastmod>2021-05-22T03:55:09.670Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -99,14 +107,6 @@
     <url>
         <loc>https://hanseul-lee.github.io/2021/02/15/SweetyPie_3%EC%A3%BC%EC%B0%A8/</loc>
         <lastmod>2021-03-11T15:07:08.600Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2021/02/22/SweetyPie_4%EC%A3%BC%EC%B0%A8/</loc>
-        <lastmod>2021-03-11T13:38:39.529Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
