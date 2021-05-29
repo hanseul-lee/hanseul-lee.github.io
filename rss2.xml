@@ -9,8 +9,37 @@
     <atom:link href="https://hanseul-lee.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 29 May 2021 04:17:01 GMT</pubDate>
+    <pubDate>Sat, 29 May 2021 06:55:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기</title>
+      <link>https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/</link>
+      <guid>https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/</guid>
+      <pubDate>Sat, 29 May 2021 04:36:27 GMT</pubDate>
+      
+      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;p&gt;fork한 repo에서 wiki 업데이트 후, upstream에 반영하는 방법을 알아보자.&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<!-- excerpt --><h1 id="GitHub-wiki란"><a href="#GitHub-wiki란" class="headerlink" title="GitHub wiki란"></a>GitHub wiki란</h1><p>GitHub 공식문서에서 wiki란 README에서 간략히 소개한 프로젝트에 대해 보다 상세한 추가 설명을 덧붙인 문서라는 설명을 볼 수 있다.</p><div class="figure center" style="width:;"><img class="fig-img" src="wiki.jpg" alt="GitHub Docs - About wiki"><span class="caption">GitHub Docs - About wiki</span></div><Br><h1 id="Pull-request로-upstream에-wiki-반영이-불가능하다고"><a href="#Pull-request로-upstream에-wiki-반영이-불가능하다고" class="headerlink" title="Pull request로 upstream에 wiki 반영이 불가능하다고?"></a>Pull request로 upstream에 wiki 반영이 불가능하다고?</h1><p>README밖에 모르던 내가 wiki의 존재를 알게 되고 파이널 프로젝트의 방대한 README를 정리해 wiki를 만들고 이를 대폭 수정하기로 했다. 따라서 우선 fork한 내 레포에서 먼저 README와 wiki를 정리해 반영했다. 이 후 pull request로 upstream에 반영하려 하니 wiki의 변경사항이 하나도 반영되지 않아 멘붕에 빠졌다.</p><p>stackoverflow를 찾아보니 실제로 git에서 pull request를 통해 upstream의 wiki를 업데이트가 불가능하다고 한다.</p><div class="figure center" style="width:;"><img class="fig-img" src="https://stackoverflow.com/questions/10642928/how-to-pull-request-a-wiki-page-on-github" alt=""></div><p>직접 일일히 옮겨야 하나 고민하던 찰나 나와 같은 고민을 하고 있던 다음과 같은 글(<a href="https://gist.github.com/larrybotha/10650410">Merge Wiki Changes From A Forked Github Repo</a>)을 발견하고 성공적으로 upstream에 내 wiki를 반영할 수 있었다.</p><br><h1 id="fork한-repo에서-wiki-업데이트-후-upstream에-반영하기"><a href="#fork한-repo에서-wiki-업데이트-후-upstream에-반영하기" class="headerlink" title="fork한 repo에서 wiki 업데이트 후, upstream에 반영하기"></a>fork한 repo에서 wiki 업데이트 후, upstream에 반영하기</h1><p>방법은 간단하다.<br>아래와 같이 OREPO의 wiki를 클론 한 후 FREPO의 위키를 merge 후 다시 OREPO에 push해 반영해주면 된다.<br><br></p><ul><li><strong>OREPO</strong> : original repo - 내 경우엔 orginiztion의 repo</li><li><strong>FREPO</strong> : the forked repo - fork 후 wiki가 업데이트 된 내 repo</li></ul><Br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [OREPO].wiki.git</span><br><span class="line">$ <span class="built_in">cd</span> [OREPO].wiki.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># squashing all FREPO changes</span></span><br><span class="line">$ git pull [FREPO].wiki.git master</span><br><span class="line"></span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure><p>나는 OREPO의 owner이기도 해서 issue 생성없이 바로 반영했는데 혹시 오픈소스나 새로운 프로젝트에 기여하는 경우라면 issue를 남기고 이를 알리는 것이 선행되어야 한다. 또한, FREPO를 fork 한 후, OREFO가 새롭게 업데이트 된 경우라면 추가적인 방법을 따라야 하는데 이는 위 링크에서 확인가능하다.</p><p>사실 중간에 개인 organization으로 연습하던 중 계속 오류가 나서 일일히 복붙해서 옮겨야하나 고민의 시간에 빠졌었는데 다시 마음을 고쳐먹고 매달려 성공하고 나니 너무 뿌듯했다. 나와 같은 고민을 하며 방법을 찾아헤매는 또다른 개발자들에게 조금이나마 이 글이 도움이 되었으면 좋겠다.</p><Br><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference."></a>Reference.</h3><ul><li><a href="https://stackoverflow.com/questions/10642928/how-to-pull-request-a-wiki-page-on-github">[Stackoverflow] How to pull request a wiki page on GitHub?</a></li><li><a href="https://gist.github.com/larrybotha/10650410">Merge Wiki Changes From A Forked Github Repo</a></li><li><a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis">[GitHub Docs] About wikis</a></li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://hanseul-lee.github.io/categories/StudyLog/">StudyLog</category>
+      
+      <category domain="https://hanseul-lee.github.io/categories/StudyLog/git/">git</category>
+      
+      
+      <category domain="https://hanseul-lee.github.io/tags/git/">git</category>
+      
+      <category domain="https://hanseul-lee.github.io/tags/gitHub/">gitHub</category>
+      
+      
+      <comments>https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[프로젝트] SweetyPie - Airbnb 클론코딩을 마치며</title>
@@ -547,32 +576,6 @@
       
       
       <comments>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>20-12-10 목요일 TIL</title>
-      <link>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/</link>
-      <guid>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/</guid>
-      <pubDate>Thu, 10 Dec 2020 09:18:19 GMT</pubDate>
-      
-      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;20-12-10 목요일 TIL&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JS 수업 보강 (darkmode, star-rating 실습)</description>
-      
-      
-      
-      <content:encoded><![CDATA[<!-- excerpt --></li></ul><h2 id="오늘-할-일-계획"><a href="#오늘-할-일-계획" class="headerlink" title="오늘 할 일 (계획)"></a>오늘 할 일 (계획)</h2><ol><li><del>JS 복습 - 38, 39, 4</del></li><li><del>웅모 강사님 수업듣기(2시 ~ 5시)</del></li><li>React - Fastcampus 인강듣기(4 ~ 12)</li></ol><h2 id="오늘-한-일-피드백"><a href="#오늘-한-일-피드백" class="headerlink" title="오늘 한 일 (피드백)"></a>오늘 한 일 (피드백)</h2><ol><li>JS복습 및 정리 완료 -&gt; notion</li><li>오늘 수업 정리(darkmode, star-rating 실습)<ul><li><a href="">darkmode</a></li><li><a href="">star-rating</a></li></ul></li></ol><h3 id="배운점"><a href="#배운점" class="headerlink" title="배운점"></a>배운점</h3><ol><li><p><strong>CSS로 처리할 수 있다면 최대한 JS보단 CSS로 처리하려고 할 것</strong><br>왜냐햐면 CSS로 처리하는 것이 훨씬 빠르며 코드를 간단하게 구현할 수 있기 때문에</p><br></li><li><p><strong>강사님 코딩 스타일</strong><br>일단 되게 해라 → 그 다음부터 진짜 코딩시작(코드 리팩토링)</p><ul><li>예시<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 리팩토링 전</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.body.contains(<span class="string">&#x27;dark&#x27;</span>)) <span class="built_in">document</span>.body.classList.remove(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">document</span>.body.classList.add(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 리팩토링 후</span></span><br><span class="line"><span class="built_in">document</span>.body.classList.toggle(<span class="string">&#x27;dark&#x27;</span>);</span><br></pre></td></tr></table></figure><Br></li></ul></li><li><p>코드 시작 전 세팅</p><ol><li><code>$ cd &lt;project-folder&gt;</code> </li><li><code>$ npm init -y</code> package.json 생성 </li><li><code>$ npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-html --save-dev</code><br>install eslint &amp; friends 설치</li><li>이후 프로젝트 루트에 .eslintrc.json 파일을 생성하고 필요에 따라 아래와 같이 룰셋을 변경<br><a href="https://poiemaweb.com/eslint#5-eslintrcjson">.eslintrc.json 룰셋 참고 - poiemaweb</a></li><li>만약 새로운 코드 폴더 생성 시, package.json과 .eslintrc.json파일 복사 후 package.json의 name을 바꿔주고 <code>npm i</code> 해주면 됨.<br></li></ol></li></ol>]]></content:encoded>
-      
-      
-      <category domain="https://hanseul-lee.github.io/categories/TIL/">TIL</category>
-      
-      
-      <category domain="https://hanseul-lee.github.io/tags/TIL/">TIL</category>
-      
-      
-      <comments>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/#disqus_thread</comments>
       
     </item>
     
