@@ -9,8 +9,48 @@
 
 
     <url>
-        <loc>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/</loc>
-        <lastmod>2021-06-06T09:21:27.757Z</lastmod>
+        <loc>https://hanseul-lee.github.io/2020/09/17/20-09-17-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
+        <lastmod>2021-06-06T09:51:58.561Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/09/25/20-09-25-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%BC%EC%A0%9C/</loc>
+        <lastmod>2021-06-06T09:51:38.553Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/08/18/20-08-18-git/</loc>
+        <lastmod>2021-06-06T09:46:07.600Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/08/18/20-08-18-git2/</loc>
+        <lastmod>2021-06-06T09:46:01.081Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/08/19/20-08-19-Github_blog/</loc>
+        <lastmod>2021-06-06T09:45:29.937Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/08/27/20-08-27-code/</loc>
+        <lastmod>2021-06-06T09:43:30.926Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +58,39 @@
 
     <url>
         <loc>https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/</loc>
-        <lastmod>2021-05-29T06:55:49.526Z</lastmod>
+        <lastmod>2021-06-06T09:42:51.216Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-17-git-cheatSheet/</loc>
+        <lastmod>2021-06-06T09:42:39.819Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/</loc>
+        <lastmod>2021-06-06T09:42:35.586Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/</loc>
+        <lastmod>2021-06-06T09:41:30.283Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/</loc>
+        <lastmod>2021-06-06T09:21:27.757Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -225,30 +297,6 @@
     </url>
 
     <url>
-        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/</loc>
-        <lastmod>2021-01-01T04:49:12.179Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-17-git-cheatSheet/</loc>
-        <lastmod>2021-01-01T04:49:09.908Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/</loc>
-        <lastmod>2021-01-01T04:49:07.031Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://hanseul-lee.github.io/2020/11/29/20-11-29-Agile/</loc>
         <lastmod>2021-01-01T04:48:57.929Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -273,14 +321,6 @@
     </url>
 
     <url>
-        <loc>https://hanseul-lee.github.io/2020/09/25/20-09-25-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%BC%EC%A0%9C/</loc>
-        <lastmod>2021-01-01T04:48:22.332Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://hanseul-lee.github.io/2020/09/22/20-09-22-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%20%EC%A0%91%EA%B7%BC%EB%B2%95/</loc>
         <lastmod>2021-01-01T04:48:12.576Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -297,48 +337,8 @@
     </url>
 
     <url>
-        <loc>https://hanseul-lee.github.io/2020/09/17/20-09-17-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-        <lastmod>2021-01-01T04:48:08.430Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://hanseul-lee.github.io/2020/09/07/20-09-07-%EC%A0%9C%EC%96%B4%EB%AC%B8%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/</loc>
         <lastmod>2021-01-01T04:48:05.306Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/08/18/20-08-18-git/</loc>
-        <lastmod>2021-01-01T04:47:55.499Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/08/18/20-08-18-git2/</loc>
-        <lastmod>2021-01-01T04:47:54.650Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/08/19/20-08-19-Github_blog/</loc>
-        <lastmod>2021-01-01T04:47:53.704Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/08/27/20-08-27-code/</loc>
-        <lastmod>2021-01-01T04:47:51.989Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

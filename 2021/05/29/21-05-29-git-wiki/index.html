@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HS&#39;s blog">
-    <title>[git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기 - HS&#39;s blog</title>
+    <title>[Git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기 - HS&#39;s blog</title>
     <link rel="canonical" href="https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/">
     <meta name="author" content="Hanseul lee">
     
@@ -16,10 +16,10 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss2.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\nGitHub wiki란GitHub 공식문서에서 wiki란 README에서 간략히 소개한 프로젝트에 대해 보다 상세한 추가 설명을 덧붙인 문서라는 설명을 볼 수 있다.\nGitHub Docs - About wiki\n\n\nPull request로 upstream에 wiki 반영이 불가능하다고?README밖에 모르던 내가 wiki의 존재를 알게 되고 파이널 프로젝트의 방대한 README를 정리해 wiki를 만들고 이를 대폭 수정하기로 했다. 따라서 우선 fork한 내 레포에서 먼저 README와 wiki를 정리해 반영했다. 이 후 pull request로 upstream에 반영하려 하니 wiki의 변경사항이 하나도 반영되지 않아 멘붕에 빠졌다.\nstackoverflow를 찾아보니 실제로 git에서 pull request를 통해 upstream의 wiki를 업데이트가 불가능하다고 한다.\n\n\n직접 일일히 옮겨야 하나 고민하던 찰나 나와 같은 고민을 하고 있던 다음과 같은 글(Merge Wiki Changes From A Forked Github Repo)을 발견하고 성공적으로 upstream에 내 wiki를 반영할 수 있었다.\n\n\nfork한 repo에서 wiki 업데이트 후, upstream에 반영하기방법은 간단하다.아래와 같이 OREPO의 wiki를 클론 한 후 FREPO의 위키를 merge 후 다시 OREPO에 push해 반영해주면 된다.\n\nOREPO : original repo - 내 경우엔 orginiztion의 repo\nFREPO : the forked repo - fork 후 wiki가 업데이트 된 내 repo\n\n\n\n1234567$ git clone [OREPO].wiki.git$ cd [OREPO].wiki.git# squashing all FREPO changes$ git pull [FREPO].wiki.git master$ git push origin master\n\n나는 OREPO의 owner이기도 해서 issue 생성없이 바로 반영했는데 혹시 오픈소스나 새로운 프로젝트에 기여하는 경우라면 issue를 남기고 이를 알리는 것이 선행되어야 한다. 또한, FREPO를 fork 한 후, OREFO가 새롭게 업데이트 된 경우라면 추가적인 방법을 따라야 하는데 이는 위 링크에서 확인가능하다.\n사실 중간에 개인 organization으로 연습하던 중 계속 오류가 나서 일일히 복붙해서 옮겨야하나 고민의 시간에 빠졌었는데 다시 마음을 고쳐먹고 매달려 성공하고 나니 너무 뿌듯했다. 나와 같은 고민을 하며 방법을 찾아헤매는 또다른 개발자들에게 조금이나마 이 글이 도움이 되었으면 좋겠다.\n\n\nReference.\n[Stackoverflow] How to pull request a wiki page on GitHub?\nMerge Wiki Changes From A Forked Github Repo\n[GitHub Docs] About wikis\n","dateCreated":"2021-05-29T13:36:27+09:00","dateModified":"2021-05-29T15:55:49+09:00","datePublished":"2021-05-29T13:36:27+09:00","description":"\n\nfork한 repo에서 wiki 업데이트 후, upstream에 반영하는 방법을 알아보자.","headline":"[git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/","keywords":"git, gitHub","thumbnailUrl":"git.jpeg"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\nGitHub wiki란GitHub 공식문서에서 wiki란 README에서 간략히 소개한 프로젝트에 대해 보다 상세한 추가 설명을 덧붙인 문서라는 설명을 볼 수 있다.\nGitHub Docs - About wiki\n\n\nPull request로 upstream에 wiki 반영이 불가능하다고?README밖에 모르던 내가 wiki의 존재를 알게 되고 파이널 프로젝트의 방대한 README를 정리해 wiki를 만들고 이를 대폭 수정하기로 했다. 따라서 우선 fork한 내 레포에서 먼저 README와 wiki를 정리해 반영했다. 이 후 pull request로 upstream에 반영하려 하니 wiki의 변경사항이 하나도 반영되지 않아 멘붕에 빠졌다.\nstackoverflow를 찾아보니 실제로 git에서 pull request를 통해 upstream의 wiki를 업데이트가 불가능하다고 한다.\n\n\n직접 일일히 옮겨야 하나 고민하던 찰나 나와 같은 고민을 하고 있던 다음과 같은 글(Merge Wiki Changes From A Forked Github Repo)을 발견하고 성공적으로 upstream에 내 wiki를 반영할 수 있었다.\n\n\nfork한 repo에서 wiki 업데이트 후, upstream에 반영하기방법은 간단하다.아래와 같이 OREPO의 wiki를 클론 한 후 FREPO의 위키를 merge 후 다시 OREPO에 push해 반영해주면 된다.\n\nOREPO : original repo - 내 경우엔 orginiztion의 repo\nFREPO : the forked repo - fork 후 wiki가 업데이트 된 내 repo\n\n\n\n1234567$ git clone [OREPO].wiki.git$ cd [OREPO].wiki.git# squashing all FREPO changes$ git pull [FREPO].wiki.git master$ git push origin master\n\n나는 OREPO의 owner이기도 해서 issue 생성없이 바로 반영했는데 혹시 오픈소스나 새로운 프로젝트에 기여하는 경우라면 issue를 남기고 이를 알리는 것이 선행되어야 한다. 또한, FREPO를 fork 한 후, OREFO가 새롭게 업데이트 된 경우라면 추가적인 방법을 따라야 하는데 이는 위 링크에서 확인가능하다.\n사실 중간에 개인 organization으로 연습하던 중 계속 오류가 나서 일일히 복붙해서 옮겨야하나 고민의 시간에 빠졌었는데 다시 마음을 고쳐먹고 매달려 성공하고 나니 너무 뿌듯했다. 나와 같은 고민을 하며 방법을 찾아헤매는 또다른 개발자들에게 조금이나마 이 글이 도움이 되었으면 좋겠다.\n\n\nReference.\n[Stackoverflow] How to pull request a wiki page on GitHub?\nMerge Wiki Changes From A Forked Github Repo\n[GitHub Docs] About wikis\n","dateCreated":"2021-05-29T13:36:27+09:00","dateModified":"2021-06-06T18:42:51+09:00","datePublished":"2021-05-29T13:36:27+09:00","description":"\n\nfork한 repo에서 wiki 업데이트 후, upstream에 반영하는 방법을 알아보자.","headline":"[Git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/","keywords":"git, gitHub","thumbnailUrl":"git.jpeg"}</script>
     <meta name="description" content="fork한 repo에서 wiki 업데이트 후, upstream에 반영하는 방법을 알아보자.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="[git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기">
+<meta property="og:title" content="[Git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기">
 <meta property="og:url" content="https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/index.html">
 <meta property="og:site_name" content="HS&#39;s blog">
 <meta property="og:description" content="fork한 repo에서 wiki 업데이트 후, upstream에 반영하는 방법을 알아보자.">
@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/wiki.jpg">
 <meta property="og:image" content="https://stackoverflow.com/questions/10642928/how-to-pull-request-a-wiki-page-on-github">
 <meta property="article:published_time" content="2021-05-29T04:36:27.406Z">
-<meta property="article:modified_time" content="2021-05-29T06:55:49.526Z">
+<meta property="article:modified_time" content="2021-06-06T09:42:51.216Z">
 <meta property="article:author" content="Hanseul lee">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="gitHub">
@@ -206,7 +206,7 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            [git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기
+            [Git] fork한 repo에서 wiki 업데이트 후, upstream에 반영하기
         </h1>
     
     
@@ -219,7 +219,7 @@
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/git/">git</a>
+    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/Git/">Git</a>
 
 
     
@@ -228,7 +228,7 @@
     <span>LastUpdated  </span>
     <time datetime="2021-05-29T13:36:27+09:00">
         
-                21.05.29 15:55:49
+                21.06.06 18:42:51
             
     </time>
 

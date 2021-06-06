@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HS&#39;s blog">
-    <title>[git] gitHub에 new repository 생성하기 - HS&#39;s blog</title>
+    <title>[Git] gitHub에 new repository 생성하기 - HS&#39;s blog</title>
     <link rel="canonical" href="https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newrepo/">
     <meta name="author" content="Hanseul lee">
     
@@ -16,10 +16,10 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss2.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\n1. GitHub Repository 생성\n\n\n\nGitHub에서 다음과 같이 새로운 Repository name을 입력하고 Create repository 버튼을 눌러 새 Repository를 생성한다. \n\n\n2. Initialize repository1git init\n\n위의 명령어를 통해 해당 프로젝트 폴더 내에 숨겨진 .git 폴더를 생성하고 이제 Git은 현재 repository에 대한 모든 변경 사항들을 추적 및 관리하게 된다.\n\n\n3. 새로운 폴더(파일) 만들고 작업 생성12git add . git commit -m &quot;commit massage&quot;\n새로운 repository에 올릴 폴더(파일)을 만들고 코드를 작성한 뒤, add, commit을 해준다.\n\n\n4. 원격 저장소와 연결 후 pushrepository 주소 복사하기\n\n생성된 repository에서 code 버튼을 누른 후, 이를 복사해 git remote add origin [repository 주소]명령으로 local과 remote repository를 연결해 준다. \n\nLocal repository : 본인의 컴퓨터에 저장된 프로젝트 저장소\nRemote repository : 로컬이 아닌 외부 서버의 원격 프로젝트 저장소\n\n이 후 git remote -v | --verbose 를 통해 원격 저장소 목록을 불러와 연결된 것을 확인할 수 있다. 이 후, 로컬에서 작업한 파일을 원격 저장소로 push 해주면 된다. -u(–set-upstream)를 통해 upstream origin 정보를 설정한 후에는 해당 브랜치에서 git push만 입력해줘도 push가 가능하다.\n123git remote add origin [repository 주소]git remote -vgit push -u origin main\n\nerror - fatal: refusing to merge unrelated histories만약 git pull이나 push를 할 때 fatal: refusing to merge unrelated histories 에러가 뜨는 경우가 있다. 이는 로컬 저장소와 원격지의 저장소의 기록(History)을 비교했을 때 소스코드의 차이가 심한 저장소의 경우, 병합 오류가 날 것을 대비하여 오류 메시지를 띄우는 것이다. 다음과 같은 명령어를 통해 해결 할 수 있다.\n1$ git pull origin 브랜치명 --allow-unrelated-histories\n\n\n\n\n\n\n\nReference\n\nhttps://git-scm.com/docs/git-remote\n[Git] GitHub 레파지토리(Repository) 생성하고 소스 올리기\n\nhttps://parksb.github.io/article/28.html\nhttps://nochoco-lee.tistory.com/34?category=343045\nhttps://ndb796.tistory.com/275\n","dateCreated":"2020-12-17T12:21:32+09:00","dateModified":"2021-01-01T13:49:12+09:00","datePublished":"2020-12-17T12:21:32+09:00","description":"\ngithub에 new repository 생성하는 방법을 알아봅시다.","headline":"[git] gitHub에 new repository 생성하기","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/","keywords":"git, gitHub","thumbnailUrl":"git.jpeg"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\n1. GitHub Repository 생성\n\n\n\nGitHub에서 다음과 같이 새로운 Repository name을 입력하고 Create repository 버튼을 눌러 새 Repository를 생성한다.\n\n\n2. Initialize repository1git init\n\n위의 명령어를 통해 해당 프로젝트 폴더 내에 숨겨진 .git 폴더를 생성하고 이제 Git은 현재 repository에 대한 모든 변경 사항들을 추적 및 관리하게 된다.\n\n\n3. 새로운 폴더(파일) 만들고 작업 생성12git add .git commit -m &quot;commit massage&quot;\n\n새로운 repository에 올릴 폴더(파일)을 만들고 코드를 작성한 뒤, add, commit을 해준다.\n\n\n4. 원격 저장소와 연결 후 pushrepository 주소 복사하기\n\n생성된 repository에서 code 버튼을 누른 후, 이를 복사해 git remote add origin [repository 주소]명령으로 local과 remote repository를 연결해 준다.\n\nLocal repository : 본인의 컴퓨터에 저장된 프로젝트 저장소\nRemote repository : 로컬이 아닌 외부 서버의 원격 프로젝트 저장소\n\n이 후 git remote -v | --verbose 를 통해 원격 저장소 목록을 불러와 연결된 것을 확인할 수 있다. 이 후, 로컬에서 작업한 파일을 원격 저장소로 push 해주면 된다. -u(–set-upstream)를 통해 upstream origin 정보를 설정한 후에는 해당 브랜치에서 git push만 입력해줘도 push가 가능하다.\n123git remote add origin [repository 주소]git remote -vgit push -u origin main\n\nerror - fatal: refusing to merge unrelated histories만약 git pull이나 push를 할 때 fatal: refusing to merge unrelated histories 에러가 뜨는 경우가 있다. 이는 로컬 저장소와 원격지의 저장소의 기록(History)을 비교했을 때 소스코드의 차이가 심한 저장소의 경우, 병합 오류가 날 것을 대비하여 오류 메시지를 띄우는 것이다. 다음과 같은 명령어를 통해 해결 할 수 있다.\n1$ git pull origin 브랜치명 --allow-unrelated-histories\n\n\n\n\nReference\n\nhttps://git-scm.com/docs/git-remote\n[Git] GitHub 레파지토리(Repository) 생성하고 소스 올리기\n\nhttps://parksb.github.io/article/28.html\nhttps://nochoco-lee.tistory.com/34?category=343045\nhttps://ndb796.tistory.com/275\n","dateCreated":"2020-12-17T12:21:32+09:00","dateModified":"2021-06-06T18:41:30+09:00","datePublished":"2020-12-17T12:21:32+09:00","description":"\n\ngithub에 new repository 생성하는 방법을 알아봅시다.","headline":"[Git] gitHub에 new repository 생성하기","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/","keywords":"git, gitHub","thumbnailUrl":"git.jpeg"}</script>
     <meta name="description" content="github에 new repository 생성하는 방법을 알아봅시다.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="[git] gitHub에 new repository 생성하기">
+<meta property="og:title" content="[Git] gitHub에 new repository 생성하기">
 <meta property="og:url" content="https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/index.html">
 <meta property="og:site_name" content="HS&#39;s blog">
 <meta property="og:description" content="github에 new repository 생성하는 방법을 알아봅시다.">
@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/1.jpg">
 <meta property="og:image" content="https://hanseul-lee.github.io/2020/12/17/20-12-17-git-newRepo/4.jpg">
 <meta property="article:published_time" content="2020-12-17T03:21:32.000Z">
-<meta property="article:modified_time" content="2021-01-01T04:49:12.179Z">
+<meta property="article:modified_time" content="2021-06-06T09:41:30.283Z">
 <meta property="article:author" content="Hanseul lee">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="gitHub">
@@ -206,7 +206,7 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            [git] gitHub에 new repository 생성하기
+            [Git] gitHub에 new repository 생성하기
         </h1>
     
     
@@ -219,7 +219,7 @@
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/git/">git</a>
+    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/Git/">Git</a>
 
 
     
@@ -228,7 +228,7 @@
     <span>LastUpdated  </span>
     <time datetime="2020-12-17T12:21:32+09:00">
         
-                21.01.01 13:49:12
+                21.06.06 18:41:30
             
     </time>
 
@@ -246,7 +246,7 @@
 
 <br>
 
-<p>GitHub에서 다음과 같이 새로운 Repository name을 입력하고 Create repository 버튼을 눌러 새 Repository를 생성한다. </p>
+<p>GitHub에서 다음과 같이 새로운 Repository name을 입력하고 Create repository 버튼을 눌러 새 Repository를 생성한다.</p>
 <br>
 
 <h2 id="2-Initialize-repository"><a href="#2-Initialize-repository" class="headerlink" title="2. Initialize repository"></a>2. Initialize repository</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
@@ -254,13 +254,14 @@
 <p>위의 명령어를 통해 해당 프로젝트 폴더 내에 숨겨진 .git 폴더를 생성하고 이제 Git은 현재 repository에 대한 모든 변경 사항들을 추적 및 관리하게 된다.</p>
 <br>
 
-<h2 id="3-새로운-폴더-파일-만들고-작업-생성"><a href="#3-새로운-폴더-파일-만들고-작업-생성" class="headerlink" title="3. 새로운 폴더(파일) 만들고 작업 생성"></a>3. 새로운 폴더(파일) 만들고 작업 생성</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add . </span><br><span class="line">git commit -m <span class="string">&quot;commit massage&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-새로운-폴더-파일-만들고-작업-생성"><a href="#3-새로운-폴더-파일-만들고-작업-생성" class="headerlink" title="3. 새로운 폴더(파일) 만들고 작업 생성"></a>3. 새로운 폴더(파일) 만들고 작업 생성</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;commit massage&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>새로운 repository에 올릴 폴더(파일)을 만들고 코드를 작성한 뒤, add, commit을 해준다.</p>
 <br>
 
 <h2 id="4-원격-저장소와-연결-후-push"><a href="#4-원격-저장소와-연결-후-push" class="headerlink" title="4. 원격 저장소와 연결 후 push"></a>4. 원격 저장소와 연결 후 push</h2><div class="figure center" style="width:700px;"><img class="fig-img" src="4.jpg" style="width:700px;" alt="repository 주소 복사하기"><span class="caption">repository 주소 복사하기</span></div>
 
-<p>생성된 repository에서 code 버튼을 누른 후, 이를 복사해 <code>git remote add origin [repository 주소]</code>명령으로 local과 remote repository를 연결해 준다. </p>
+<p>생성된 repository에서 code 버튼을 누른 후, 이를 복사해 <code>git remote add origin [repository 주소]</code>명령으로 local과 remote repository를 연결해 준다.</p>
 <ul>
 <li>Local repository : 본인의 컴퓨터에 저장된 프로젝트 저장소</li>
 <li>Remote repository : 로컬이 아닌 외부 서버의 원격 프로젝트 저장소</li>
@@ -270,9 +271,6 @@
 
 <h2 id="error-fatal-refusing-to-merge-unrelated-histories"><a href="#error-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="error - fatal: refusing to merge unrelated histories"></a>error - fatal: refusing to merge unrelated histories</h2><p>만약 git pull이나 push를 할 때 <code>fatal: refusing to merge unrelated histories</code> 에러가 뜨는 경우가 있다. 이는 로컬 저장소와 원격지의 저장소의 기록(History)을 비교했을 때 소스코드의 차이가 심한 저장소의 경우, 병합 오류가 날 것을 대비하여 오류 메시지를 띄우는 것이다. 다음과 같은 명령어를 통해 해결 할 수 있다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin 브랜치명 --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
-
-
-
 
 <br>
 
@@ -314,7 +312,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-cheatSheet/" data-tooltip="[git] git 명령어 정리" aria-label="PREVIOUS: [git] git 명령어 정리">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-cheatSheet/" data-tooltip="[Git] git 명령어 정리" aria-label="PREVIOUS: [Git] git 명령어 정리">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -323,7 +321,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-16-git-branch-main/" data-tooltip="[git] Default 브랜치명 변경하기 (master -&gt; main)" aria-label="NEXT: [git] Default 브랜치명 변경하기 (master -&gt; main)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-16-git-branch-main/" data-tooltip="[Git] Default 브랜치명 변경하기 (master -&gt; main)" aria-label="NEXT: [Git] Default 브랜치명 변경하기 (master -&gt; main)">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -373,7 +371,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-cheatSheet/" data-tooltip="[git] git 명령어 정리" aria-label="PREVIOUS: [git] git 명령어 정리">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-cheatSheet/" data-tooltip="[Git] git 명령어 정리" aria-label="PREVIOUS: [Git] git 명령어 정리">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -382,7 +380,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-16-git-branch-main/" data-tooltip="[git] Default 브랜치명 변경하기 (master -&gt; main)" aria-label="NEXT: [git] Default 브랜치명 변경하기 (master -&gt; main)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-16-git-branch-main/" data-tooltip="[Git] Default 브랜치명 변경하기 (master -&gt; main)" aria-label="NEXT: [Git] Default 브랜치명 변경하기 (master -&gt; main)">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HS&#39;s blog">
-    <title>[git] Default 브랜치명 변경하기 (master -&gt; main) - HS&#39;s blog</title>
+    <title>[Git] Default 브랜치명 변경하기 (master -&gt; main) - HS&#39;s blog</title>
     <link rel="canonical" href="https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/">
     <meta name="author" content="Hanseul lee">
     
@@ -16,10 +16,10 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss2.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\ngithub의 default 브랜치가 main으로 바뀌다\n\n\n2020년 10월, github 공식 블로그는 default 브랜치의 명칭이 main으로 바뀌었음을 알렸다. 이는 이전부터 꾸준히 진행된 논쟁인 master/slave, balcklist/whitelist와 같이 인종차별적인 단어의 문제를 개선하려는 움직임에서 시작되었다. 따라서 github 역시 이러한 움직임에 동참하여 default 브랜치를 기존 master에서 main으로 변경하였고 올해 말부터 master로 생성했던 기존 브랜치의 이름 또한 원할하게 변경 가능하게 작업중이라고 한다.\n\n\n기존 Repository의 Default branch 이름을 변경하고 싶다면?따라서 기존 Repository에서 master로 만들어져있는 default 브랜치 이름을 main으로 변경하고 싶다면 다음과 같이 바꿀 수 있다.\n\n\nstep1.\ngit branch 명령어 “-m/-M” 옵션을 사용해 브랜치 이름을 변경하고 remote 저장소에 push12$ git branch -m master main$ git push -u origin main\n\n\n\nstep2.\nGithub Repository 설정 변경\n\n\n\n\n\nstep3.\n기존 브랜치 삭제\n\n\n\n이를 통해 기존 master로 되어있는 default 브랜치명을 main으로 바꿀 수 있다.\n\n\n\nReference\n\ngithub blog\ngithub/renaming\nhttps://kyeoneee.tistory.com/72\n","dateCreated":"2020-12-17T11:26:36+09:00","dateModified":"2021-01-01T13:49:07+09:00","datePublished":"2020-12-17T11:26:36+09:00","description":"\ngithub의 default의 브랜치명을 master에서 main으로 변경하는 방법을 알아봅시다.","headline":"[git] Default 브랜치명 변경하기 (master -> main)","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/","keywords":"git, github","thumbnailUrl":"git.jpeg"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg"},"articleBody":"\n\ngithub의 default 브랜치가 main으로 바뀌다\n\n\n2020년 10월, github 공식 블로그는 default 브랜치의 명칭이 main으로 바뀌었음을 알렸다. 이는 이전부터 꾸준히 진행된 논쟁인 master/slave, balcklist/whitelist와 같이 인종차별적인 단어의 문제를 개선하려는 움직임에서 시작되었다. 따라서 github 역시 이러한 움직임에 동참하여 default 브랜치를 기존 master에서 main으로 변경하였고 올해 말부터 master로 생성했던 기존 브랜치의 이름 또한 원할하게 변경 가능하게 작업중이라고 한다.\n\n\n기존 Repository의 Default branch 이름을 변경하고 싶다면?따라서 기존 Repository에서 master로 만들어져있는 default 브랜치 이름을 main으로 변경하고 싶다면 다음과 같이 바꿀 수 있다.\n\n\nstep1.\ngit branch 명령어 “-m/-M” 옵션을 사용해 브랜치 이름을 변경하고 remote 저장소에 push\n\n12$ git branch -m master main$ git push -u origin main\n\nstep2.\nGithub Repository 설정 변경\n\n\n\n\n\nstep3.\n기존 브랜치 삭제\n\n\n\n이를 통해 기존 master로 되어있는 default 브랜치명을 main으로 바꿀 수 있다.\n\n\n\nReference\n\ngithub blog\ngithub/renaming\nhttps://kyeoneee.tistory.com/72\n","dateCreated":"2020-12-17T11:26:36+09:00","dateModified":"2021-06-06T18:42:35+09:00","datePublished":"2020-12-17T11:26:36+09:00","description":"\n\ngithub의 default의 브랜치명을 master에서 main으로 변경하는 방법을 알아봅시다.","headline":"[Git] Default 브랜치명 변경하기 (master -> main)","image":["git.jpeg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/"},"publisher":{"@type":"Organization","name":"Hanseul lee","sameAs":["https://github.com/hanseul-lee/"],"image":"myphoto.jpg","logo":{"@type":"ImageObject","url":"myphoto.jpg"}},"url":"https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/","keywords":"git, github","thumbnailUrl":"git.jpeg"}</script>
     <meta name="description" content="github의 default의 브랜치명을 master에서 main으로 변경하는 방법을 알아봅시다.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="[git] Default 브랜치명 변경하기 (master -&gt; main)">
+<meta property="og:title" content="[Git] Default 브랜치명 변경하기 (master -&gt; main)">
 <meta property="og:url" content="https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/index.html">
 <meta property="og:site_name" content="HS&#39;s blog">
 <meta property="og:description" content="github의 default의 브랜치명을 master에서 main으로 변경하는 방법을 알아봅시다.">
@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/step2.jpg">
 <meta property="og:image" content="https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/step3.jpg">
 <meta property="article:published_time" content="2020-12-17T02:26:36.000Z">
-<meta property="article:modified_time" content="2021-01-01T04:49:07.031Z">
+<meta property="article:modified_time" content="2021-06-06T09:42:35.586Z">
 <meta property="article:author" content="Hanseul lee">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="github">
@@ -207,7 +207,7 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            [git] Default 브랜치명 변경하기 (master -&gt; main)
+            [Git] Default 브랜치명 변경하기 (master -&gt; main)
         </h1>
     
     
@@ -220,7 +220,7 @@
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/git/">git</a>
+    <a class="category-link" href="/categories/StudyLog/">StudyLog</a>, <a class="category-link" href="/categories/StudyLog/Git/">Git</a>
 
 
     
@@ -229,7 +229,7 @@
     <span>LastUpdated  </span>
     <time datetime="2020-12-17T11:26:36+09:00">
         
-                21.01.01 13:49:07
+                21.06.06 18:42:35
             
     </time>
 
@@ -253,10 +253,10 @@
 <br>
 
 <h3 id="step1"><a href="#step1" class="headerlink" title="step1."></a>step1.</h3><ul>
-<li>git branch 명령어 “-m/-M” 옵션을 사용해 브랜치 이름을 변경하고 remote 저장소에 push<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -m master main</span><br><span class="line">$ git push -u origin main</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>git branch 명령어 “-m/-M” 옵션을 사용해 브랜치 이름을 변경하고 remote 저장소에 push</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -m master main</span><br><span class="line">$ git push -u origin main</span><br></pre></td></tr></table></figure>
+
 <h3 id="step2"><a href="#step2" class="headerlink" title="step2."></a>step2.</h3><ul>
 <li>Github Repository 설정 변경</li>
 </ul>
@@ -307,7 +307,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-newRepo/" data-tooltip="[git] gitHub에 new repository 생성하기" aria-label="PREVIOUS: [git] gitHub에 new repository 생성하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-newRepo/" data-tooltip="[Git] gitHub에 new repository 생성하기" aria-label="PREVIOUS: [Git] gitHub에 new repository 생성하기">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -366,7 +366,7 @@
             <li class="post-action">
                 
                     
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-newRepo/" data-tooltip="[git] gitHub에 new repository 생성하기" aria-label="PREVIOUS: [git] gitHub에 new repository 생성하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2020/12/17/20-12-17-git-newRepo/" data-tooltip="[Git] gitHub에 new repository 생성하기" aria-label="PREVIOUS: [Git] gitHub에 new repository 생성하기">
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
