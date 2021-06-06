@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/</loc>
+        <lastmod>2021-06-06T09:16:40.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hanseul-lee.github.io/2021/05/29/21-05-29-git-wiki/</loc>
         <lastmod>2021-05-29T06:55:49.526Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -235,14 +243,6 @@
     <url>
         <loc>https://hanseul-lee.github.io/2020/12/17/20-12-16-git-branch-main/</loc>
         <lastmod>2021-01-01T04:49:07.031Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/</loc>
-        <lastmod>2021-01-01T04:49:03.592Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
