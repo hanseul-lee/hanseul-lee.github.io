@@ -231,34 +231,6 @@
     </item>
     
     <item>
-      <title>[프로그래머스] Level.1 소수찾기 (JavaScript)</title>
-      <link>https://hanseul-lee.github.io/2021/01/06/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/</link>
-      <guid>https://hanseul-lee.github.io/2021/01/06/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/</guid>
-      <pubDate>Wed, 06 Jan 2021 03:46:55 GMT</pubDate>
-      
-      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;[프로그래머스] Level.1 소수찾기 (JavaScript)&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<!-- excerpt --><!-- # [프로그래머스] Level.1 소수찾기 (JavaScript) -->]]></content:encoded>
-      
-      
-      <category domain="https://hanseul-lee.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="https://hanseul-lee.github.io/categories/Algorithm/Programmers/">Programmers</category>
-      
-      
-      <category domain="https://hanseul-lee.github.io/tags/Algorithm/">Algorithm</category>
-      
-      <category domain="https://hanseul-lee.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/">프로그래머스</category>
-      
-      
-      <comments>https://hanseul-lee.github.io/2021/01/06/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level-1-%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0-JavaScript/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>[React] 리액트 라우터로 SPA 개발하기</title>
       <link>https://hanseul-lee.github.io/2021/01/05/React-13/</link>
       <guid>https://hanseul-lee.github.io/2021/01/05/React-13/</guid>
@@ -579,6 +551,32 @@
       
       
       <comments>https://hanseul-lee.github.io/2020/12/10/20-12-10-darkmode/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>20-12-10 목요일 TIL</title>
+      <link>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/</link>
+      <guid>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/</guid>
+      <pubDate>Thu, 10 Dec 2020 09:18:19 GMT</pubDate>
+      
+      <description>&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;20-12-10 목요일 TIL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JS 수업 보강 (darkmode, star-rating 실습)</description>
+      
+      
+      
+      <content:encoded><![CDATA[<!-- excerpt --></li></ul><h2 id="오늘-할-일-계획"><a href="#오늘-할-일-계획" class="headerlink" title="오늘 할 일 (계획)"></a>오늘 할 일 (계획)</h2><ol><li><del>JS 복습 - 38, 39, 4</del></li><li><del>웅모 강사님 수업듣기(2시 ~ 5시)</del></li><li>React - Fastcampus 인강듣기(4 ~ 12)</li></ol><h2 id="오늘-한-일-피드백"><a href="#오늘-한-일-피드백" class="headerlink" title="오늘 한 일 (피드백)"></a>오늘 한 일 (피드백)</h2><ol><li>JS복습 및 정리 완료 -&gt; notion</li><li>오늘 수업 정리(darkmode, star-rating 실습)<ul><li><a href="">darkmode</a></li><li><a href="">star-rating</a></li></ul></li></ol><h3 id="배운점"><a href="#배운점" class="headerlink" title="배운점"></a>배운점</h3><ol><li><p><strong>CSS로 처리할 수 있다면 최대한 JS보단 CSS로 처리하려고 할 것</strong><br>왜냐햐면 CSS로 처리하는 것이 훨씬 빠르며 코드를 간단하게 구현할 수 있기 때문에</p><br></li><li><p><strong>강사님 코딩 스타일</strong><br>일단 되게 해라 → 그 다음부터 진짜 코딩시작(코드 리팩토링)</p><ul><li>예시<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 리팩토링 전</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.body.contains(<span class="string">&#x27;dark&#x27;</span>)) <span class="built_in">document</span>.body.classList.remove(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">document</span>.body.classList.add(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 리팩토링 후</span></span><br><span class="line"><span class="built_in">document</span>.body.classList.toggle(<span class="string">&#x27;dark&#x27;</span>);</span><br></pre></td></tr></table></figure><Br></li></ul></li><li><p>코드 시작 전 세팅</p><ol><li><code>$ cd &lt;project-folder&gt;</code> </li><li><code>$ npm init -y</code> package.json 생성 </li><li><code>$ npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-html --save-dev</code><br>install eslint &amp; friends 설치</li><li>이후 프로젝트 루트에 .eslintrc.json 파일을 생성하고 필요에 따라 아래와 같이 룰셋을 변경<br><a href="https://poiemaweb.com/eslint#5-eslintrcjson">.eslintrc.json 룰셋 참고 - poiemaweb</a></li><li>만약 새로운 코드 폴더 생성 시, package.json과 .eslintrc.json파일 복사 후 package.json의 name을 바꿔주고 <code>npm i</code> 해주면 됨.<br></li></ol></li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://hanseul-lee.github.io/categories/TIL/">TIL</category>
+      
+      
+      <category domain="https://hanseul-lee.github.io/tags/TIL/">TIL</category>
+      
+      
+      <comments>https://hanseul-lee.github.io/2020/12/10/20-12-10-TIL/#disqus_thread</comments>
       
     </item>
     
