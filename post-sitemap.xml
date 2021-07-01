@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://hanseul-lee.github.io/2020/08/20/20-08-20-TIL/</loc>
+        <lastmod>2021-07-01T13:04:38.968Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://hanseul-lee.github.io/2020/09/17/20-09-17-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
         <lastmod>2021-06-06T09:51:58.561Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -555,14 +563,6 @@
     <url>
         <loc>https://hanseul-lee.github.io/2020/08/24/20-08-24-TIL/</loc>
         <lastmod>2020-10-24T02:43:27.371Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://hanseul-lee.github.io/2020/08/20/20-08-20-TIL/</loc>
-        <lastmod>2020-10-24T02:43:23.174Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
